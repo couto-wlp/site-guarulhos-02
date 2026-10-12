@@ -10,8 +10,8 @@ export const SITE_CONFIG = {
     addressCountry: "BR"
   },
   contact: {
-    phone: "(11) 9999-9999",
-    whatsapp: "5511999999999",
+    phone: "(11) 94375-8808",
+    whatsapp: "5511943758808",
     email: "contato@diskcacambag.com.br"
   },
   social: {

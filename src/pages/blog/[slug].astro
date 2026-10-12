@@ -26,8 +26,8 @@ const titleHighlight = titleWords.slice(splitIndex).join(' ');
 // Posts relacionados
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts.filter(p => p.id !== post.id).slice(0, 3);
-const whatsappLink = `https://wa.me/5511943799889?text=${encodeURIComponent(`Olá! Li o artigo "${post.data.title}" no blog e gostaria de um orçamento para aluguel de caçamba em Guarulhos.`)}`;
-const phoneLink = `tel:+5511943799889`;
+const whatsappLink = `https://wa.me/5511943758808?text=${encodeURIComponent(`Olá! Li o artigo "${post.data.title}" no blog e gostaria de um orçamento para aluguel de caçamba em Guarulhos.`)}`;
+const phoneLink = `tel:+5511943758808`;
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
@@ -174,7 +174,7 @@ const phoneLink = `tel:+5511943799889`;
                             Dúvidas? Fale com nossa equipe:
                         </p>
                         <a href={phoneLink} class="text-xl font-black text-white tracking-tight hover:underline block">
-                            (11) 94375-6600
+                            (11) 94375-8808
                         </a>
                     </div>
                 </aside>
