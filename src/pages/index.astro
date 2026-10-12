@@ -9,6 +9,7 @@ const servicosDestaque = todosServicos.slice(0, 9);
 <Layout 
 	title="Locação de Caçambas Em Guarulhos" 
 	description="A melhor opção de aluguel de caçambas em Guarulhos. Atendimento rápido, descarte correto e orçamento sem compromisso."
+	preloadImage="/home_truck.webp"
 >
 	<!-- 1. Hero -->
 	<section class="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
@@ -42,8 +43,13 @@ const servicosDestaque = todosServicos.slice(0, 9);
 		<div class="flex-1 w-full">
 			<div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:shadow-primary/20 transition-all">
 				<img 
-					src="/home_truck.jpg" 
+					src="/home_truck.webp" 
 					alt="Caminhão com caçamba estacionária verde para entulho" 
+					width="900"
+					height="750"
+					loading="eager"
+					fetchpriority="high"
+					decoding="async"
 					class="w-full h-auto object-cover aspect-video lg:aspect-[4/3.05] hover:scale-105 transition-transform duration-700"
 				/>
 			</div>
@@ -61,7 +67,15 @@ const servicosDestaque = todosServicos.slice(0, 9);
 			{servicosDestaque.length > 0 ? servicosDestaque.map(servico => (
 				<a href={`/servicos/${servico.id}`} class="block bg-white p-6 md:p-8 rounded-3xl border-2 border-gray-100 hover:border-primary transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 group">
 					<div class="aspect-[4/3] mb-6 flex items-center justify-center overflow-hidden rounded-2xl bg-white">
-						<img src={servico.data.image || "/cacamba-verde.png"} alt="Caçamba" class="w-full h-full object-cover mix-blend-multiply scale-110 group-hover:scale-125 transition-transform duration-500" />
+						<img 
+							src={(servico.data.image ? servico.data.image.replace(/\.(png|jpg|jpeg)$/, '.webp') : "/cacamba-verde.webp")} 
+							alt={servico.data.title} 
+							width="400"
+							height="300"
+							loading="lazy"
+							decoding="async"
+							class="w-full h-full object-cover mix-blend-multiply scale-110 group-hover:scale-125 transition-transform duration-500" 
+						/>
 					</div>
 					<h3 class="text-xl md:text-2xl font-black text-gray-900 mb-4 group-hover:text-primary transition-colors tracking-tighter">{servico.data.title}</h3>
 					<p class="text-gray-600 text-base leading-relaxed mb-4">{servico.data.description}</p>
@@ -138,7 +152,7 @@ const servicosDestaque = todosServicos.slice(0, 9);
 						<p class="text-gray-700 text-lg leading-relaxed mb-8 italic">"Solicitei uma caçamba rápida para a reforma da minha loja e o suporte foi excelente. Chegaram no horário, o entregador foi muito atencioso para não travar a garagem e a retirada foi bem ágil. Com toda certeza locarei de novo!"</p>
 						<div class="flex items-center gap-4 mt-auto">
 							<div class="relative w-14 h-14 shrink-0">
-								<img src="/depoimento2.jpg" alt="Fernanda Lima" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-green-100" />
+								<img src="/depoimento2.webp" alt="Fernanda Lima" width="56" height="56" loading="lazy" decoding="async" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-green-100" />
 								<div class="absolute -bottom-1 -right-1 bg-white rounded-full p-[2px] shadow-sm flex items-center justify-center">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5">
 										<path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20c11.045 0 20-8.955 20-20C44 22.659 43.862 21.35 43.611 20.083z"/>
@@ -159,7 +173,7 @@ const servicosDestaque = todosServicos.slice(0, 9);
 						<p class="text-gray-700 text-lg leading-relaxed mb-8 italic">"Atuo com reformas e a agilidade na troca e locação das caçambas é essencial para o projeto não atrasar. Eles são fornecedores de ouro: suporte ágil pelo celular, valor honesto e respeito com o consumidor."</p>
 						<div class="flex items-center gap-4 mt-auto">
 							<div class="relative w-14 h-14 shrink-0">
-								<img src="/depoimento3.jpg" alt="Marcos Souza" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-green-100" />
+								<img src="/depoimento3.webp" alt="Marcos Souza" width="56" height="56" loading="lazy" decoding="async" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-green-100" />
 								<div class="absolute -bottom-1 -right-1 bg-white rounded-full p-[2px] shadow-sm flex items-center justify-center">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5">
 										<path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20c11.045 0 20-8.955 20-20C44 22.659 43.862 21.35 43.611 20.083z"/>
@@ -180,7 +194,7 @@ const servicosDestaque = todosServicos.slice(0, 9);
 						<p class="text-gray-700 text-lg leading-relaxed mb-8 italic">"Fiz um descarte grande de entulhos e o sistema de aluguel foi muito simples e sem enrolação. Me explicaram exatamente sobre a medida certa da caçamba e o que podia ser recolhido. Trabalho rápido, justo e profissional."</p>
 						<div class="flex items-center gap-4 mt-auto">
 							<div class="relative w-14 h-14 shrink-0">
-								<img src="/depoimento1.jpg" alt="Paulo Mendes" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-green-100" />
+								<img src="/depoimento1.webp" alt="Paulo Mendes" width="56" height="56" loading="lazy" decoding="async" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-green-100" />
 								<div class="absolute -bottom-1 -right-1 bg-white rounded-full p-[2px] shadow-sm flex items-center justify-center">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5">
 										<path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20c11.045 0 20-8.955 20-20C44 22.659 43.862 21.35 43.611 20.083z"/>
@@ -214,7 +228,7 @@ const servicosDestaque = todosServicos.slice(0, 9);
 				</div>
 				<div class="w-full md:w-[40%]">
 					<div class="aspect-square max-w-md mx-auto bg-gray-200 rounded-2xl overflow-hidden flex items-center justify-center shadow-inner border-2 border-gray-100">
-						<img src="/equipe-cacamba.png" alt="Nossa equipe DiskCaçamba" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+						<img src="/equipe-cacamba.webp" alt="Nossa equipe DiskCaçamba" width="600" height="600" loading="lazy" decoding="async" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
 					</div>
 				</div>
 			</div>

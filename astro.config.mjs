@@ -5,7 +5,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://diskcacambaguarulhos.com.br',
-  output: 'server',
+  output: 'static',
   server: {
     host: true,
     port: 4321

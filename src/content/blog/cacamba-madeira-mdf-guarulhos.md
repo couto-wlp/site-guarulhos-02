@@ -5,7 +5,7 @@ description: "Aluguel de caçamba para madeira, MDF e pallets em Guarulhos. Desc
 
 ## Aluguel de Caçamba para Madeira e MDF em Guarulhos
 
-![Caçamba para descarte de madeira e MDF em Guarulhos](/cacamba-madeira-mdf.png)
+![Caçamba para descarte de madeira e MDF em Guarulhos](/cacamba-.webp)
 
 O descarte de restos de madeira e painéis de marcenaria exige uma destinação ambiental altamente específica. Guarulhos, por ser um dos maiores polos industriais e logísticos do país, abriga um número imenso de construtoras, oficinas de móveis planejados (marcenarias) e galpões. A rotina desses setores, somada às reformas residenciais, gera toneladas de resíduos lenhosos. O acúmulo desse material no canteiro de obras não é apenas um problema de organização, mas um grave risco de incêndios. Para solucionar isso, oferecemos o aluguel de caçamba para madeira e MDF, garantindo a segurança do seu espaço com atendimento ágil e destinação 100% sustentável.
 

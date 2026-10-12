@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 5m³"
 description: "Locação de Caçamba de 5m³ em Guarulhos. A escolha ideal para as reformas médias e remoção de grandes volumes de entulho."
-image: "/cacamba-5m.png"
+image: "/cacamba-.webp"
 ---
 
 O modelo mais requisitado por empreiteiros, arquitetos e moradores de Guarulhos. A caçamba de 5m³ oferece o equilíbrio perfeito: possui espaço suficiente para acomodar grandes volumes de entulho pesado, ao mesmo tempo em que respeita rigorosamente as dimensões permitidas para estacionamento nas vias públicas do município.

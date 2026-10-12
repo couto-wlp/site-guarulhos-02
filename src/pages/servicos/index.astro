@@ -13,7 +13,15 @@ const servicos = await getCollection('servicos');
             {servicos.map(servico => (
                 <a href={`/servicos/${servico.id}`} class="block bg-white p-6 md:p-8 rounded-3xl border-2 border-gray-100 hover:border-primary transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 group">
                     <div class="aspect-[4/3] mb-6 flex items-center justify-center overflow-hidden rounded-2xl bg-white">
-                        <img src={servico.data.image || "/cacamba-verde.png"} alt="Caçamba" class="w-full h-full object-cover mix-blend-multiply scale-110 group-hover:scale-125 transition-transform duration-500" />
+                        <img 
+                            src={servico.data.image || "/cacamba-verde.webp"} 
+                            alt={servico.data.title} 
+                            width="400" 
+                            height="300" 
+                            loading="lazy" 
+                            decoding="async" 
+                            class="w-full h-full object-cover mix-blend-multiply scale-110 group-hover:scale-125 transition-transform duration-500" 
+                        />
                     </div>
                     <h2 class="text-xl md:text-2xl font-black text-gray-900 mb-4 group-hover:text-primary transition-colors tracking-tighter">{servico.data.title}</h2>
                     <p class="text-gray-600 text-base leading-relaxed mb-4">{servico.data.description}</p>

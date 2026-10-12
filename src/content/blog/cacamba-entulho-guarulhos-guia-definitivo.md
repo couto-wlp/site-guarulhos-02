@@ -5,7 +5,7 @@ description: "Especialistas em aluguel de caçamba de entulho em Guarulhos. Desc
 
 ## Aluguel de Caçamba de Entulho em Guarulhos: O Guia Definitivo
 
-![Caçamba de entulho em Guarulhos: O Guia Definitivo](/cacamba-entulho-guia-definitivo.jpg)
+![Caçamba de entulho em Guarulhos: O Guia Definitivo](/cacamba-.webp)
 
 Seja para uma pequena reforma residencial, uma grande obra comercial ou a limpeza de um terreno, o descarte correto dos resíduos é uma das etapas mais críticas do seu projeto. Atrasos na retirada do entulho podem paralisar o trabalho dos seus pedreiros e gerar multas gravíssimas com a fiscalização municipal.
 

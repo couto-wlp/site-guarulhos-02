@@ -1,12 +1,12 @@
 ---
 title: "Caçamba para Jardinagem e Podas em Guarulhos - Rápido"
 description: "Aluguel de caçamba para jardinagem e podas em Guarulhos. Limpeza de terrenos, remoção de galhos, compostagem e CTR. Orce agora!"
-image: "/cacamba-jardinagem-podas.png"
+image: "/cacamba-.webp"
 ---
 
 ## Aluguel de Caçamba para Jardinagem e Podas em Guarulhos
 
-![Caçamba para entulho de jardinagem e podas em Guarulhos](/cacamba-jardinagem-podas.png)
+![Caçamba para entulho de jardinagem e podas em Guarulhos](/cacamba-.webp)
 
 Guarulhos possui vastas áreas verdes, chácaras, loteamentos em expansão e grandes condomínios que demandam manutenção paisagística constante. A limpeza de terrenos, a poda de árvores e a roçagem geram volumes gigantescos de resíduos verdes que, por lei, não podem ser descartados no lixo comum doméstico ou abandonados nas calçadas. Para manter o seu quintal, condomínio ou área verde limpos e organizados, o aluguel de caçamba para jardinagem e podas em Guarulhos é a solução definitiva e ecologicamente correta.
 

@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 4m³"
 description: "Aluguel de Caçamba de 4m³ em Guarulhos. Solução ágil e econômica para pequenas reformas residenciais e limpeza de obras."
-image: "/cacamba-4m.png"
+image: "/cacamba-.webp"
 ---
 # Locação de Caçamba de Entulho 4m³ em Guarulhos
 

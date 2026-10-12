@@ -1,12 +1,12 @@
 ---
 title: "Caçamba para Entulho e Alvenaria em Guarulhos"
 description: "Aluguel de caçamba para entulho e alvenaria em Guarulhos. Descarte 100% legalizado, emissão de CTR e MTR, entrega rápida e o melhor preço. Orce agora!"
-image: "/cacamba-entulho-alvenaria.png"
+image: "/cacamba-.webp"
 ---
 
 ## Caçamba para Entulho e Alvenaria em Guarulhos: Descarte Rápido e Legalizado
 
-![Caçamba para entulho e alvenaria em Guarulhos](/cacamba-entulho-alvenaria.png)
+![Caçamba para entulho e alvenaria em Guarulhos](/cacamba-.webp)
 
 A alvenaria e o entulho bruto constituem a maior parcela dos resíduos gerados na construção civil em Guarulhos. Demolições de paredes, reformas de cozinhas e banheiros, quebra de contrapisos e escavações produzem toneladas de concreto, tijolos cerâmicos, blocos de cimento e argamassa. Por serem materiais classificados como **Classe A** pelas resoluções do CONAMA, possuem altíssima densidade e peso bruto expressivo, exigindo equipamentos reforçados e logística eficiente para o seu transporte.
 

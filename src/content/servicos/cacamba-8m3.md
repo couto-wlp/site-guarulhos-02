@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 8m³"
 description: "Aluguel de Caçamba de 8m³ em Guarulhos. A maior capacidade total do mercado para grandes obras logísticas e industriais."
-image: "/cacamba-8m.png"
+image: "/cacamba-.webp"
 ---
 
 A força máxima em gestão de resíduos. Projetada exclusivamente para atender a alta demanda de construtoras, complexos industriais e demolições em grande escala na cidade de Guarulhos, a caçamba estacionária de 8m³ é o topo de linha da nossa frota. Se o seu canteiro de obras gera um fluxo contínuo e maciço de detritos, este é o único equipamento capaz de garantir que a sua operação não sofra interrupções.
