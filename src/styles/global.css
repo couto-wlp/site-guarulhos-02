@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --color-primary: #15803d;
+  --color-secondary: #1E3A8A;
+  --color-accent: #000000;
+  --text-base: 17px;
+  --text-base--line-height: 1.6;
+}

@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '../../data/config';
+
+const title = "Aluguel de Caçamba no Bela Vista - Rápido e Seguro";
+const description = "Aluguel de caçamba no Bela Vista com entrega rápida e descarte legal. Emissão de MTR e total respeito à sua obra. Peça um orçamento!";
+const whatsappLink = `https://wa.me/5511943799889?text=${encodeURIComponent("Olá! Gostaria de um orçamento para aluguel de caçamba no bairro Bela Vista em Guarulhos.")}`;
+const phoneLink = `tel:+5511943799889`;
+---
+
+<Layout title={title} description={description}>
+    <div class="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 sm:px-6">
+
+        <!-- 1. Hero da Página de Bairro -->
+        <section class="max-w-5xl mx-auto w-full pt-16 pb-12 text-center px-4">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-green-700 text-white font-black text-xs mb-6 uppercase tracking-widest shadow-sm">
+                Atendimento em Guarulhos
+            </span>
+
+            <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+                Aluguel de Caçamba no <span class="text-green-700">Bela Vista</span>
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium mb-10">
+                Aluguel de caçamba no Bela Vista com entrega rápida e descarte legal. Emissão de MTR e total respeito à sua obra. Peça um orçamento!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-8 py-4 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Orçamento via WhatsApp
+                </a>
+                <a href="#conteudo" class="inline-flex justify-center items-center px-8 py-4 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 gap-2 w-full sm:w-auto shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    Ver Caçambas
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Three Feature Cards Row -->
+        <section class="max-w-6xl mx-auto w-full my-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Logística Expressa</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Entrega e remoção rápidas e pontuais no bairro Bela Vista, mantendo a produtividade de sua reforma em alta.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Descarte 100% Legal</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Emissão completa de MTR e CTR, atendendo rigorosamente às normas da Secretaria Municipal do Meio Ambiente (SMMA).
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Posicionamento Seguro</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Motoristas experientes para posicionamento legalizado da caçamba sem atrapalhar o trânsito ou pedestres no Bela Vista.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Main Two-Column Content (Left: Document / Right: Sticky Sidebar Card) -->
+        <section id="conteudo" class="max-w-6xl mx-auto w-full my-8 pb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-start">
+
+                <!-- Left Column: Content Container -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-sm space-y-10">
+
+                    <!-- Section 1 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Aluguel de Caçamba no Bela Vista: Agilidade e Segurança para a Sua Obra
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                O bairro Bela Vista é uma das áreas mais tradicionais e movimentadas de Guarulhos. Com um forte comércio local e vias residenciais de fluxo intenso, realizar qualquer tipo de construção ou reforma na região exige organização redobrada. O espaço nas calçadas e ruas é restrito, e deixar restos de materiais acumulados não é uma opção. É por isso que o nosso serviço de aluguel de caçamba no Bela Vista foi estruturado para entregar pontualidade, garantindo que o canteiro da sua obra permaneça limpo sem atrapalhar o trânsito local.
+                            </p>
+                            <p>
+                                Trabalhamos com uma logística expressa e motoristas experientes que conhecem as peculiaridades do bairro. Nosso foco é entregar o recipiente no momento exato em que a quebra de alvenaria começa e retirá-lo com eficiência, mantendo a produtividade da sua reforma em alta e evitando qualquer infração com a prefeitura.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Qual o Tamanho de Caçamba Ideal para sua Necessidade?
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Acertar na escolha do volume do equipamento evita gastos extras com viagens desnecessárias e previne o excesso de peso. Confira abaixo os tamanhos disponíveis e suas aplicações:
+                        </p>
+                        <ul class="space-y-4 text-gray-600 text-base leading-relaxed font-medium pl-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-4m3" class="text-green-700 hover:underline">Caçamba de 4m³</a>:</strong> Este é o padrão mais utilizado em reformas residenciais e obras de pequeno porte no Bela Vista. A caçamba de 4 metros cúbicos tem dimensões compactas, ocupando o espaço exato de uma vaga de carro de passeio. É a escolha perfeita para o descarte de entulhos pesados e densos, como concreto, restos de alvenaria, pisos, azulejos e terra, garantindo que o caminhão consiga realizar o içamento com segurança.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-5m3" class="text-green-700 hover:underline">Caçamba de 5m³</a>:</strong> Uma opção intermediária excelente para reformas comerciais ou residenciais um pouco maiores. Com um metro cúbico a mais de capacidade, ela é ideal para quem precisa descartar a tradicional mistura de entulho pesado com materiais levemente mais volumosos, como pedaços de gesso, restos de madeira, rodapés e recortes de tubulação.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-6m3" class="text-green-700 hover:underline">Caçamba de 6m³</a>:</strong> Projetada estrategicamente para receber materiais de volume alto e peso moderado. A caçamba de 6 metros cúbicos é muito solicitada para o descarte de podas de árvores do quintal, grandes placas de gesso cartonado (drywall), forros antigos e plásticos. Para manter a segurança viária e preservar o sistema hidráulico do caminhão, ela jamais deve ser preenchida até o topo exclusivamente com materiais densos (como terra pura).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-7m3" class="text-green-700 hover:underline">Caçamba de 7m³</a>:</strong> Este modelo é voltado para atender a demanda de comércios locais, pequenos galpões e obras estruturais maiores. A caçamba de 7 metros cúbicos possui excelente espaço interno para armazenar resíduos volumosos e leves, como grandes embalagens, paletes de madeira quebrados, sobras de isolamento térmico e papelão, reduzindo a frequência de trocas do equipamento.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-8m3" class="text-green-700 hover:underline">Caçamba de 8m³</a>:</strong> A maior opção entre as caçambas estacionárias convencionais, a versão de 8 metros cúbicos é destinada estritamente a materiais de grande volume e baixíssima densidade. Ela é amplamente utilizada para a limpeza de terrenos extensos (remoção de mato e folhagens) ou para o escoamento de resíduos industriais e comerciais muito leves, como plásticos expansivos, espumas e isopor.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-roll-on" class="text-green-700 hover:underline">Caçamba Roll-on</a>:</strong> O sistema Roll-on (ou Roll-on Roll-off) é a estrutura definitiva para grandes demolições, escavações profundas e megaprojetos. Tratam-se de contêineres gigantes, com capacidades que variam de 25m³ a 40m³, transportados por caminhões trucados especiais. São indicados exclusivamente para grandes canteiros de obras que geram toneladas de resíduos por dia e que possuem espaço físico amplo para as manobras logísticas.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Descarte 100% Legalizado e Sustentável
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                A confiabilidade é o fator mais importante na contratação deste serviço. Descartar resíduos de forma clandestina em terrenos baldios ou margens de rios é crime ambiental, e o dono da obra responde solidariamente.
+                            </p>
+                            <p>
+                                Com a nossa empresa, sua obra opera dentro da lei. Somos autorizados pela Secretaria Municipal de Meio Ambiente (SMMA) de Guarulhos e fomentamos a economia circular. Todo o entulho recolhido é levado para estações de transbordo e reciclagem licenciadas. Emitimos o MTR (Manifesto de Transporte de Resíduos) e o CTR (Controle de Transporte de Resíduos), atestando que os seus resíduos inertes viraram base para pavimentação ecológica e o rejeito foi destinado corretamente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Regras de Segurança e Posicionamento na Via
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Para evitar transtornos e multas com os órgãos de fiscalização do trânsito no Bela Vista, seguimos regras rigorosas:
+                        </p>
+                        <ul class="space-y-3 text-gray-600 text-base leading-relaxed font-medium pl-2 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Posicionamento:</strong> A caçamba é estacionada paralelamente ao meio-fio. Não obstruímos bueiros (bocas de lobo), faixas de pedestres, guias rebaixadas ou esquinas.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Limite de Carga:</strong> O entulho jamais deve ultrapassar a borda superior da caixa metálica. O excesso causa derramamento nas vias durante o transporte.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Proibições:</strong> É estritamente proibido descartar lixo orgânico doméstico, lixo hospitalar, pneus, telhas de amianto e produtos químicos inflamáveis.</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Sua reforma no Bela Vista merece fluir sem estresse. Entre em contato com a nossa equipe agora mesmo pelo WhatsApp, solicite o seu orçamento e garanta uma gestão de resíduos rápida, legalizada e com o melhor custo-benefício!
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Sticky Sidebar Card -->
+                <aside class="w-full">
+                    <div class="sticky top-28 bg-green-700 rounded-3xl p-6 sm:p-8 text-center shadow-2xl shadow-green-700/30 text-white">
+                        <span class="inline-block text-xs font-black tracking-widest text-white/90 uppercase mb-4">
+                            ORÇAMENTO GRATUITO
+                        </span>
+                        
+                        <h3 class="text-2xl font-black text-white mb-6 leading-tight tracking-tight">
+                            Interessado em alugar uma caçamba no Bela Vista?
+                        </h3>
+
+                        <div class="space-y-3 mb-6">
+                            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-[#1c2331] text-white font-black text-sm sm:text-base rounded-xl hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                                Pedir no WhatsApp
+                            </a>
+                            <a href={phoneLink} class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-white text-gray-950 font-black text-sm sm:text-base rounded-xl hover:bg-gray-50 transition-all hover:scale-[1.02] active:scale-95 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.136-7.136l1.292-.97c.363-.271.527-.734.418-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Ligar Agora
+                            </a>
+                        </div>
+
+                        <p class="text-xs font-bold text-white/80 mb-1">
+                            Dúvidas? Fale com nossa equipe:
+                        </p>
+                        <a href={phoneLink} class="text-xl font-black text-white tracking-tight hover:underline block">
+                            (11) 94375-6600
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </div>
+</Layout>

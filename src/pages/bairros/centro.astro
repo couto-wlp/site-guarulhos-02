@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '../../data/config';
+
+const title = "Aluguel de Caçamba no Centro - Entrega Rápida";
+const description = "Precisa de aluguel de caçamba no Centro? Serviço ágil para sua reforma, com descarte legal e emissão de MTR. Solicite um orçamento!";
+const whatsappLink = `https://wa.me/5511943799889?text=${encodeURIComponent("Olá! Gostaria de um orçamento para aluguel de caçamba no Centro de Guarulhos.")}`;
+const phoneLink = `tel:+5511943799889`;
+---
+
+<Layout title={title} description={description}>
+    <div class="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 sm:px-6">
+
+        <!-- 1. Hero da Página de Bairro -->
+        <section class="max-w-5xl mx-auto w-full pt-16 pb-12 text-center px-4">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-green-700 text-white font-black text-xs mb-6 uppercase tracking-widest shadow-sm">
+                Atendimento em Guarulhos
+            </span>
+
+            <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+                Aluguel de Caçamba no <span class="text-green-700">Centro</span>
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium mb-10">
+                Precisa de aluguel de caçamba no Centro? Serviço ágil para sua reforma, com descarte legal e emissão de MTR. Solicite um orçamento!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-8 py-4 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Orçamento via WhatsApp
+                </a>
+                <a href="#conteudo" class="inline-flex justify-center items-center px-8 py-4 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 gap-2 w-full sm:w-auto shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    Ver Caçambas
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Three Feature Cards Row -->
+        <section class="max-w-6xl mx-auto w-full my-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Logística Central Ágil</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Entregas e retiradas em horários estratégicos no Centro de Guarulhos, sem atrapalhar o trânsito.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Descarte 100% Legal</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Emissão de CTR e MTR, conformidade com a SMMA e Cetesb e envio a ATTs certificadas.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Posicionamento Preciso</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Colocação rente à guia em vaga de veículo, respeitando o fluxo de pedestres e comércios locais.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Main Two-Column Content (Left: Document / Right: Sticky Sidebar Card) -->
+        <section id="conteudo" class="max-w-6xl mx-auto w-full my-8 pb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-start">
+
+                <!-- Left Column: Content Container -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-sm space-y-10">
+
+                    <!-- Section 1 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Aluguel de Caçamba no Centro: Logística Ágil para a Sua Reforma
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                O Centro de Guarulhos é o verdadeiro coração comercial, histórico e financeiro da cidade. Com o tráfego intenso das principais vias, calçadas sempre movimentadas e uma fiscalização municipal rigorosa, realizar qualquer obra ou reforma nessa região é um verdadeiro desafio logístico. O espaço físico é escasso e deixar restos de materiais na calçada resulta em multas imediatas, além de prejudicar os pedestres e o acesso ao comércio vizinho. Para garantir que sua obra não pare, o serviço de aluguel de caçamba no Centro é a solução definitiva em praticidade e segurança.
+                            </p>
+                            <p>
+                                Contamos com motoristas experientes e uma frota adaptada para navegar pelas ruas estreitas e de mão única da região central. Entregamos e retiramos o equipamento em horários estratégicos, assegurando que o cronograma da sua obra seja cumprido sem causar transtornos ao trânsito local.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Qual o Tamanho de Caçamba Ideal para sua Obra?
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Dimensionar corretamente o recipiente evita custos desnecessários e problemas com excesso de peso no momento da retirada. Conheça as opções disponíveis e suas indicações para obras na região central:
+                        </p>
+                        <ul class="space-y-4 text-gray-600 text-base leading-relaxed font-medium pl-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-4m3" class="text-green-700 hover:underline">Caçamba de 4m³</a>:</strong> Este é o modelo mais tradicional e amplamente solicitado para reformas em lojas e residências. Com dimensões compactas que ocupam o espaço exato de uma vaga de carro de passeio, a caçamba de 4 metros cúbicos é perfeita para o descarte de materiais densos e muito pesados, como restos de alvenaria, pisos, azulejos e concreto, sem prejudicar o estacionamento nas ruas do Centro.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-5m3" class="text-green-700 hover:underline">Caçamba de 5m³</a>:</strong> Uma excelente opção intermediária para quem necessita de um fôlego extra em reformas comerciais. A caçamba de 5 metros cúbicos acomoda perfeitamente a mistura clássica das obras: entulho pesado associado a materiais levemente mais volumosos, como pedaços de gesso, recortes de madeira, rodapés e portas antigas substituídas durante a modernização da loja.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-6m3" class="text-green-700 hover:underline">Caçamba de 6m³</a>:</strong> Projetada estrategicamente para receber materiais de peso moderado e alto volume. A caçamba de 6 metros cúbicos é a escolha certa para descartar grandes quantidades de gesso cartonado (drywall), forros antigos e plásticos. Para preservar a segurança no içamento e evitar acidentes no trânsito, ela nunca deve ser preenchida até a borda exclusivamente com materiais densos, como terra ou concreto puro.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-7m3" class="text-green-700 hover:underline">Caçamba de 7m³</a>:</strong> Este equipamento atende à demanda de galpões e comércios de maior porte. A caçamba de 7 metros cúbicos possui excelente capacidade interna para o armazenamento de resíduos leves e altamente volumosos, como grandes caixas de embalagens, paletes de madeira quebrados, sobras de isolamento térmico e papelão, otimizando o número de trocas logísticas.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-8m3" class="text-green-700 hover:underline">Caçamba de 8m³</a>:</strong> A maior entre as caçambas estacionárias de rua convencionais. A versão de 8 metros cúbicos é destinada estritamente a resíduos de grande volume e baixíssima densidade. Ela é amplamente utilizada para o escoamento muito rápido de materiais comerciais levíssimos, como plásticos expansivos, isopor, espumas e resíduos têxteis em grande escala.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-roll-on" class="text-green-700 hover:underline">Caçamba Roll-on</a>:</strong> O sistema Roll-on (ou Roll-on Roll-off) é a estrutura definitiva para demolições completas e grandes construções corporativas. Operando como contêineres gigantes, essas caçambas possuem capacidades colossais de 25m³ a 40m³. Como são transportadas por caminhões trucados especiais, são indicadas unicamente para canteiros de obras que dispõem de amplo recuo e espaço físico de manobra, não sendo adequadas para o meio-fio de ruas estreitas do Centro.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Descarte 100% Legalizado e Certificação Ambiental
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                A contratação de transportadores clandestinos pode custar muito caro. Em Guarulhos, a responsabilidade ambiental é solidária. Se o entulho da sua obra for despejado de forma irregular, a prefeitura rastreará o material e a multa recairá diretamente sobre o seu CPF ou CNPJ.
+                            </p>
+                            <p>
+                                Com a nossa equipe, sua obra opera 100% dentro da lei. Somos licenciados pela Secretaria Municipal de Meio Ambiente (SMMA) e pela Cetesb. Ao concluir a locação, emitimos o CTR (Controle de Transporte de Resíduos) e o MTR, garantindo que todo o seu entulho foi levado para Áreas de Transbordo e Triagem (ATT) autorizadas, transformando materiais inertes em brita reciclada para pavimentação e destinando rejeitos a aterros ecológicos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Regras Fundamentais para Ocupação de Via no Centro
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Para que o aluguel ocorra de forma segura em uma das áreas mais fiscalizadas da cidade, pedimos atenção a três regras cruciais:
+                        </p>
+                        <ul class="space-y-3 text-gray-600 text-base leading-relaxed font-medium pl-2 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Posicionamento:</strong> A caçamba será estacionada paralelamente à guia, devendo ocupar apenas a vaga de um veículo. É proibido alocá-la sobre faixas de pedestres, guias rebaixadas, pontos de ônibus e bueiros.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Atenção ao Limite (Sem Morrinho):</strong> O entulho não pode ultrapassar o limite superior da caixa metálica. O excesso de volume pode causar o derramamento de detritos nas vias movimentadas do Centro durante o transporte, gerando risco severo de acidentes e autuações de trânsito.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Descarte Exclusivo de Entulho:</strong> O recipiente é destinado a resíduos inertes (minerais e madeiras). É rigorosamente proibido o descarte de lixo orgânico, lixo de restaurantes locais, materiais hospitalares, químicos e inflamáveis.</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Não perca tempo e dinheiro com atrasos na sua reforma. Entre em contato conosco via WhatsApp agora mesmo, receba um orçamento transparente e garanta a melhor gestão de resíduos para a sua obra no Centro!
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Sticky Sidebar Card -->
+                <aside class="w-full">
+                    <div class="sticky top-28 bg-green-700 rounded-3xl p-6 sm:p-8 text-center shadow-2xl shadow-green-700/30 text-white">
+                        <span class="inline-block text-xs font-black tracking-widest text-white/90 uppercase mb-4">
+                            ORÇAMENTO GRATUITO
+                        </span>
+                        
+                        <h3 class="text-2xl font-black text-white mb-6 leading-tight tracking-tight">
+                            Interessado em alugar uma caçamba no Centro?
+                        </h3>
+
+                        <div class="space-y-3 mb-6">
+                            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-[#1c2331] text-white font-black text-sm sm:text-base rounded-xl hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                                Pedir no WhatsApp
+                            </a>
+                            <a href={phoneLink} class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-white text-gray-950 font-black text-sm sm:text-base rounded-xl hover:bg-gray-50 transition-all hover:scale-[1.02] active:scale-95 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.136-7.136l1.292-.97c.363-.271.527-.734.418-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Ligar Agora
+                            </a>
+                        </div>
+
+                        <p class="text-xs font-bold text-white/80 mb-1">
+                            Dúvidas? Fale com nossa equipe:
+                        </p>
+                        <a href={phoneLink} class="text-xl font-black text-white tracking-tight hover:underline block">
+                            (11) 94375-6600
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </div>
+</Layout>

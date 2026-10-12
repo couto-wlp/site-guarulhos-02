@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE_CONFIG } from '../data/config';
+---
+<Layout title="Contato | DiskCaçamba Guarulhos" description="Contate a DiskCaçamba e solicite orçamentos de locação de caçambas em Guarulhos. O seu suporte é imediato pelo WhatsApp.">
+    <section class="max-w-6xl mx-auto w-full">
+        <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-16 tracking-tighter text-center leading-tight">Fale <span class="text-green-700">Conosco</span></h1>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="flex flex-col">
+                <h2 class="text-3xl md:text-[47px] font-black mb-8 text-gray-900 tracking-tighter">Informações de Contato</h2>
+                <p class="text-gray-600 text-base leading-relaxed mb-10">Precisa de uma caçamba com urgência ou tem dúvidas sobre a destinação do entulho? Estamos prontos para te atender.</p>
+                
+                <div class="space-y-8 mb-12">
+                    <div class="flex items-start gap-5 hover:scale-105 transition-all p-4 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md">
+                        <div class="w-14 h-14 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-black text-gray-900 text-base mb-1">Endereço (Escritório)</h3>
+                            <p class="text-gray-600 text-base">{SITE_CONFIG.address.streetAddress}<br>{SITE_CONFIG.address.addressLocality} - {SITE_CONFIG.address.addressRegion}, {SITE_CONFIG.address.postalCode}</p>
+                        </div>
+                    </div>
+
+                    <a href="mailto:contato@diskcacamba.com.br" class="flex items-start gap-5 hover:scale-105 transition-all p-4 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md group">
+                        <div class="w-14 h-14 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-secondary transition-colors">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-black text-gray-900 text-base mb-1 group-hover:text-primary transition-colors">E-mail</h3>
+                            <p class="text-gray-600 text-base">contato@diskcacamba.com.br</p>
+                        </div>
+                    </a>
+
+                    <a href="tel:+5511999999999" class="flex items-start gap-5 hover:scale-105 transition-all p-4 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md group">
+                        <div class="w-14 h-14 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-secondary transition-colors">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-black text-gray-900 text-base mb-1 group-hover:text-primary transition-colors">Telefone / WhatsApp</h3>
+                            <p class="text-gray-600 text-base">(11) 9999-9999</p>
+                        </div>
+                    </a>
+                </div>
+
+                <a href="https://wa.me/5511999999999" target="_blank" class="flex items-center justify-center gap-4 w-full bg-green-700 hover:bg-green-800 text-white font-black text-base rounded-2xl p-6 md:p-8 transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 mt-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Chamar no WhatsApp
+                </a>
+            </div>
+            
+            <div class="bg-gray-50 p-8 md:p-12 rounded-3xl border-2 border-gray-100 shadow-xl">
+                <h3 class="text-3xl font-black text-gray-900 mb-8 tracking-tighter">Envie uma Mensagem</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-gray-800 font-black mb-3 text-base">Nome Completo</label>
+                        <input type="text" class="w-full p-6 bg-white border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-0 text-base transition-colors hover:border-gray-300" placeholder="Seu nome completo" required />
+                    </div>
+                    <div>
+                        <label class="block text-gray-800 font-black mb-3 text-base">Telefone com DDD</label>
+                        <input type="tel" class="w-full p-6 bg-white border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-0 text-base transition-colors hover:border-gray-300" placeholder="(11) 9999-9999" required />
+                    </div>
+                    <div>
+                        <label class="block text-gray-800 font-black mb-3 text-base">Bairro para a Caçamba</label>
+                        <input type="text" class="w-full p-6 bg-white border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-0 text-base transition-colors hover:border-gray-300" placeholder="Ex: Centro, Guarulhos" />
+                    </div>
+                    <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-black text-base rounded-2xl p-6 md:p-8 transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 mt-6">
+                        Solicitar Orçamento
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="mt-20">
+            <h2 class="text-3xl font-black text-gray-900 mb-8 tracking-tighter text-center">Nossa Localização</h2>
+            <div class="w-full h-96 rounded-3xl overflow-hidden shadow-xl border-2 border-gray-100">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://maps.google.com/maps?q=R.%20Lu%C3%ADs%20Sarraceni,%20288%20-%20Jardim%20Bom%20Clima,%20Guarulhos%20-%20SP,%2007122-270&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    title="Localização da DiskCaçamba no Google Maps"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+</Layout>

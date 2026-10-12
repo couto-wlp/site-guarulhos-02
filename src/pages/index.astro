@@ -1,0 +1,245 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const todosServicos = await getCollection('servicos');
+const servicosDestaque = todosServicos.slice(0, 9);
+---
+
+<Layout 
+	title="Locação de Caçambas Em Guarulhos" 
+	description="A melhor opção de aluguel de caçambas em Guarulhos. Atendimento rápido, descarte correto e orçamento sem compromisso."
+>
+	<!-- 1. Hero -->
+	<section class="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
+		<!-- Texto (Esquerda) -->
+		<div class="flex-1 w-full text-center lg:text-left">
+			<span class="inline-block py-2 px-4 rounded-full bg-gray-100 text-gray-900 font-bold text-sm mb-6 uppercase tracking-wider">
+				Líder em Locação de Caçambas em Guarulhos
+			</span>
+			<h1 class="text-4xl md:text-5xl lg:text-[56px] font-black leading-none tracking-tighter text-gray-900 lg:whitespace-nowrap">
+				Locação de Caçambas <br /> <span class="text-green-700">Em Guarulhos</span>
+			</h1>
+			
+			<p class="text-base text-gray-600 mt-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+				Sua obra livre de entulhos em tempo recorde. Trabalhamos com caçambas revisadas, frota ágil e destinação 100% ecológica na região de Guarulhos.
+			</p>
+
+			<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5 mt-10">
+			<a href="https://wa.me/5511999999999" target="_blank" class="inline-flex justify-center items-center px-10 py-5 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg>
+					Chamar no WhatsApp
+				</a>
+				<a href="/servicos" class="inline-flex justify-center items-center px-10 py-5 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95">
+					Ver Serviços
+				</a>
+			</div>
+		</div>
+
+		<!-- Imagem (Direita) -->
+		<div class="flex-1 w-full">
+			<div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:shadow-primary/20 transition-all">
+				<img 
+					src="/home_truck.jpg" 
+					alt="Caminhão com caçamba estacionária verde para entulho" 
+					class="w-full h-auto object-cover aspect-video lg:aspect-[4/3.05] hover:scale-105 transition-transform duration-700"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- 4. Nossos Equipamentos (Caçambas) -->
+	<section id="equipamentos">
+		<div class="flex flex-col items-center text-center mb-12">
+			<h2 class="text-3xl md:text-[47px] font-black text-gray-900 mb-4 tracking-tighter">Nossas <span class="text-green-700">Caçambas</span></h2>
+			<p class="text-gray-600 text-base">Soluções na medida certa para o volume do seu entulho.</p>
+		</div>
+		
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+			{servicosDestaque.length > 0 ? servicosDestaque.map(servico => (
+				<a href={`/servicos/${servico.id}`} class="block bg-white p-6 md:p-8 rounded-3xl border-2 border-gray-100 hover:border-primary transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 group">
+					<div class="aspect-[4/3] mb-6 flex items-center justify-center overflow-hidden rounded-2xl bg-white">
+						<img src={servico.data.image || "/cacamba-verde.png"} alt="Caçamba" class="w-full h-full object-cover mix-blend-multiply scale-110 group-hover:scale-125 transition-transform duration-500" />
+					</div>
+					<h3 class="text-xl md:text-2xl font-black text-gray-900 mb-4 group-hover:text-primary transition-colors tracking-tighter">{servico.data.title}</h3>
+					<p class="text-gray-600 text-base leading-relaxed mb-4">{servico.data.description}</p>
+					<span class="text-green-700 font-bold group-hover:text-primary transition-colors flex items-center gap-2">
+						Saiba mais
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+						</svg>
+					</span>
+				</a>
+			)) : (
+				<div class="col-span-3 text-center p-12 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-300">
+					<p class="text-gray-500 font-bold text-base">Caçambas serão listadas aqui quando adicionadas.</p>
+				</div>
+			)}
+		</div>
+
+		<div class="mt-12 flex justify-center">
+			<a href="/servicos" class="inline-flex px-8 py-4 bg-green-700 text-white font-black rounded-xl hover:bg-green-800 hover:scale-105 active:scale-95 transition-all shadow-lg">
+				Ver Todos os Tamanhos
+			</a>
+		</div>
+	</section>
+
+	<div class="flex flex-col">
+		<!-- 2. Diferenciais -->
+		<section class="w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] px-6 py-24 bg-green-50">
+			<div class="max-w-6xl mx-auto">
+				<h2 class="text-3xl md:text-[47px] font-black text-center text-[#1c2331] mb-16 tracking-tighter">
+					Por que somos sua <span class="text-green-700">melhor opção</span>
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<!-- Card 1 -->
+					<div class="bg-white p-10 md:p-12 rounded-[2rem] shadow-sm">
+						<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-8">
+							<svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+						</div>
+						<h3 class="text-2xl font-black text-[#1c2331] mb-4 tracking-tighter">Agilidade na Entrega</h3>
+						<p class="text-gray-600 text-base leading-relaxed">
+							Sabemos que sua obra não pode parar. Com uma logística inteligente e equipe de prontidão, enviamos a caçamba até o seu endereço com máxima urgência e pontualidade.
+						</p>
+					</div>
+					<!-- Card 2 -->
+					<div class="bg-white p-10 md:p-12 rounded-[2rem] shadow-sm">
+						<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-8">
+							<svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.95 11.95 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+						</div>
+						<h3 class="text-2xl font-black text-[#1c2331] mb-4 tracking-tighter">Empresa 100% Legalizada</h3>
+						<p class="text-gray-600 text-base leading-relaxed">
+							Evite multas e dores de cabeça! Atuamos com licenciamento completo na Prefeitura de Guarulhos. Garantimos o descarte ecológico correto e emitimos o MTR para a segurança do seu projeto.
+						</p>
+					</div>
+					<!-- Card 3 -->
+					<div class="bg-white p-10 md:p-12 rounded-[2rem] shadow-sm">
+						<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-8">
+							<svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+						</div>
+						<h3 class="text-2xl font-black text-[#1c2331] mb-4 tracking-tighter">Excelente Custo-Benefício</h3>
+						<p class="text-gray-600 text-base leading-relaxed">
+							Um serviço de alta qualidade não precisa ser caro. Garantimos o melhor atendimento da região com valores justos para sua obra e pagamento facilitado no Pix ou no cartão.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<!-- 5. Depoimentos -->
+		<section class="w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] px-6 py-24 bg-white">
+			<div class="max-w-6xl mx-auto">
+				<h2 class="text-3xl md:text-[47px] font-black mb-16 text-center tracking-tighter text-[#1c2331]">Depoimentos dos <span class="text-green-700">Nossos Clientes</span></h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+					<div class="bg-gray-50 p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+						<div class="text-yellow-400 text-xl tracking-widest mb-4">★★★★★</div>
+						<p class="text-gray-700 text-lg leading-relaxed mb-8 italic">"Solicitei uma caçamba rápida para a reforma da minha loja e o suporte foi excelente. Chegaram no horário, o entregador foi muito atencioso para não travar a garagem e a retirada foi bem ágil. Com toda certeza locarei de novo!"</p>
+						<div class="flex items-center gap-4 mt-auto">
+							<div class="relative w-14 h-14 shrink-0">
+								<img src="/depoimento2.jpg" alt="Fernanda Lima" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-green-100" />
+								<div class="absolute -bottom-1 -right-1 bg-white rounded-full p-[2px] shadow-sm flex items-center justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5">
+										<path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20c11.045 0 20-8.955 20-20C44 22.659 43.862 21.35 43.611 20.083z"/>
+										<path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/>
+										<path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+										<path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-0.792 2.237-2.231 4.166-4.087 5.571c0.001-0.001 0.002-0.001 0.003-0.002l6.19 5.238C36.971 39.205 44 34 44 24C44 22.659 43.862 21.35 43.611 20.083z"/>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<div class="font-black text-[#1c2331] text-base">Fernanda Lima</div>
+								<div class="text-sm text-gray-500 font-semibold">Moradora do Aracília</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-gray-50 p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+						<div class="text-yellow-400 text-xl tracking-widest mb-4">★★★★★</div>
+						<p class="text-gray-700 text-lg leading-relaxed mb-8 italic">"Atuo com reformas e a agilidade na troca e locação das caçambas é essencial para o projeto não atrasar. Eles são fornecedores de ouro: suporte ágil pelo celular, valor honesto e respeito com o consumidor."</p>
+						<div class="flex items-center gap-4 mt-auto">
+							<div class="relative w-14 h-14 shrink-0">
+								<img src="/depoimento3.jpg" alt="Marcos Souza" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-green-100" />
+								<div class="absolute -bottom-1 -right-1 bg-white rounded-full p-[2px] shadow-sm flex items-center justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5">
+										<path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20c11.045 0 20-8.955 20-20C44 22.659 43.862 21.35 43.611 20.083z"/>
+										<path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/>
+										<path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+										<path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-0.792 2.237-2.231 4.166-4.087 5.571c0.001-0.001 0.002-0.001 0.003-0.002l6.19 5.238C36.971 39.205 44 34 44 24C44 22.659 43.862 21.35 43.611 20.083z"/>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<div class="font-black text-[#1c2331] text-base">Marcos Souza</div>
+								<div class="text-sm text-gray-500 font-semibold">Construtor em Cumbica</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-gray-50 p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+						<div class="text-yellow-400 text-xl tracking-widest mb-4">★★★★★</div>
+						<p class="text-gray-700 text-lg leading-relaxed mb-8 italic">"Fiz um descarte grande de entulhos e o sistema de aluguel foi muito simples e sem enrolação. Me explicaram exatamente sobre a medida certa da caçamba e o que podia ser recolhido. Trabalho rápido, justo e profissional."</p>
+						<div class="flex items-center gap-4 mt-auto">
+							<div class="relative w-14 h-14 shrink-0">
+								<img src="/depoimento1.jpg" alt="Paulo Mendes" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-green-100" />
+								<div class="absolute -bottom-1 -right-1 bg-white rounded-full p-[2px] shadow-sm flex items-center justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5">
+										<path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20c11.045 0 20-8.955 20-20C44 22.659 43.862 21.35 43.611 20.083z"/>
+										<path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/>
+										<path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+										<path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-0.792 2.237-2.231 4.166-4.087 5.571c0.001-0.001 0.002-0.001 0.003-0.002l6.19 5.238C36.971 39.205 44 34 44 24C44 22.659 43.862 21.35 43.611 20.083z"/>
+									</svg>
+								</div>
+							</div>
+							<div>
+								<div class="font-black text-[#1c2331] text-base">Paulo Mendes</div>
+								<div class="text-sm text-gray-500 font-semibold">Morador do Pimentas</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 3. Sobre Nós (Resumo) -->
+		<section class="w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] px-6 py-24 bg-green-50 border-b border-gray-100">
+			<div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+				<div class="w-full md:w-[60%]">
+					<h2 class="text-3xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter">Sobre <span class="text-green-700">nós</span></h2>
+					<p class="text-gray-600 text-base leading-relaxed mb-8">
+						Desde 2009, a DiskCaçamba (DC Guarulhos) descomplica o descarte de entulho na sua obra. Oferecemos aluguel de caçambas com logística ágil, preço justo e total responsabilidade ambiental. Garantimos o descarte 100% legalizado dos seus resíduos (CTR/MTR), protegendo seu CPF/CNPJ contra multas e mantendo sua reforma sempre limpa e organizada.
+					</p>
+					<a href="/sobre" class="inline-flex items-center justify-center px-8 py-4 bg-green-700 text-white font-black rounded-xl hover:bg-green-800 hover:scale-105 active:scale-95 transition-all shadow-lg hover:shadow-green-700/30">
+						Conheça nossa História
+					</a>
+				</div>
+				<div class="w-full md:w-[40%]">
+					<div class="aspect-square max-w-md mx-auto bg-gray-200 rounded-2xl overflow-hidden flex items-center justify-center shadow-inner border-2 border-gray-100">
+						<img src="/equipe-cacamba.png" alt="Nossa equipe DiskCaçamba" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+	<!-- 6. Chamada de Contato -->
+	<section class="text-center max-w-4xl mx-auto">
+		<h2 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">Pronto para limpar <span class="text-green-700">sua obra?</span></h2>
+		<p class="text-base text-gray-600 mb-10 font-medium">Fale conosco agora e reserve a sua caçamba com o melhor preço de Guarulhos.</p>
+		<div class="flex flex-col sm:flex-row gap-6 justify-center">
+			<a href="https://wa.me/5511999999999" target="_blank" class="inline-flex justify-center items-center px-10 py-5 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg>
+				Chamar no WhatsApp
+			</a>
+			<a href="tel:+5511999999999" class="inline-flex justify-center items-center px-10 py-5 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 shadow-xl gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.136-7.136l1.292-.97c.363-.271.527-.734.418-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+				Ligar Agora
+			</a>
+		</div>
+	</section>
+</Layout>
+

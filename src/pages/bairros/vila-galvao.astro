@@ -1,0 +1,255 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '../../data/config';
+
+const title = "Aluguel de Caçamba na Vila Galvão - Obra Segura";
+const description = "Buscando aluguel de caçamba na Vila Galvão? Serviço ágil, descarte 100% legalizado e emissão de laudo CTR. Peça seu orçamento!";
+const whatsappLink = `https://wa.me/5511943799889?text=${encodeURIComponent("Olá! Gostaria de um orçamento para aluguel de caçamba na Vila Galvão em Guarulhos.")}`;
+const phoneLink = `tel:+5511943799889`;
+---
+
+<Layout title={title} description={description}>
+    <div class="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 sm:px-6">
+
+        <!-- 1. Hero da Página de Bairro -->
+        <section class="max-w-5xl mx-auto w-full pt-16 pb-12 text-center px-4">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-green-700 text-white font-black text-xs mb-6 uppercase tracking-widest shadow-sm">
+                Atendimento em Guarulhos
+            </span>
+
+            <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+                Aluguel de Caçamba na <span class="text-green-700">Vila Galvão</span>
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium mb-10">
+                Buscando aluguel de caçamba na Vila Galvão? Serviço ágil, descarte 100% legalizado e emissão de laudo CTR. Peça seu orçamento!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-8 py-4 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Orçamento via WhatsApp
+                </a>
+                <a href="#conteudo" class="inline-flex justify-center items-center px-8 py-4 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 gap-2 w-full sm:w-auto shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    Ver Caçambas
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Three Feature Cards Row -->
+        <section class="max-w-6xl mx-auto w-full my-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.5m-15 10.5V10.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Tradição e Nobreza</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Atendimento cuidadoso nas imediações do Lago dos Patos e Avenida Sete de Setembro.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Descarte 100% Legalizado</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Conformidade com SMMA e Cetesb com emissão imediata de laudo CTR e MTR para sua proteção.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Preservação Urbana</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Caçambas alinhadas que protegem calçamentos históricos e asfalto sem bloquear pedestres.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Layout de Conteúdo: Duas Colunas (Texto + Sidebar Sticky) -->
+        <section id="conteudo" class="max-w-6xl mx-auto w-full py-8 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 items-start">
+                
+                <!-- Left Column: White Document Container with 4 Sections -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-sm space-y-12">
+                    
+                    <!-- Section 1: Intro -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-6">
+                            Aluguel de Caçamba na Vila Galvão: Tradição e Excelência na Sua Obra
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            A Vila Galvão respira a história e o charme de Guarulhos. Sendo um dos bairros mais antigos, tradicionais e nobres da cidade, é o lar do famoso Lago dos Patos, de museus, paróquias históricas e de um comércio pulsante, especialmente ao redor da Avenida Sete de Setembro. A região preserva casarões e ruas arborizadas ao mesmo tempo em que recebe clínicas modernas e residências de alto padrão. Reformar um imóvel nesse cenário exige lidar com vias de tráfego complexo e moradores que prezam pela organização urbana. Para assegurar que o seu canteiro de obras não destoe dessa harmonia, o aluguel de caçamba na Vila Galvão deve ser executado por uma empresa com precisão logística e máximo respeito à vizinhança.
+                        </p>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            A dinâmica urbana local é desafiadora. O bloqueio de calçadas com entulho atrai reclamações imediatas e fiscalização de trânsito. Nossos motoristas de caminhão poli-guindaste possuem vasto treinamento para operar nas ruas de traçado histórico do bairro. A caçamba é posicionada com suavidade, ocupando exatamente a área de uma vaga de estacionamento, protegendo o pavimento de paralelepípedos ou asfaltos mais antigos, preservando as tradicionais árvores da região e deixando as calçadas 100% livres.
+                        </p>
+                    </div>
+
+                    <hr class="border-gray-100" />
+
+                    <!-- Section 2: Dumpster Sizes (6 cards) -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-3">
+                            Qual o Tamanho de Caçamba Ideal para a Sua Reforma?
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-8">
+                            Dimensionar o volume do equipamento de forma correta evita custos extras e garante a segurança do içamento do caminhão nas vias tradicionais do bairro. Conheça as opções disponíveis para a Vila Galvão:
+                        </p>
+
+                        <div class="space-y-6">
+                            <!-- 4m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-4m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 4m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    O modelo mais tradicional e seguro para reformas residenciais e comerciais na região. Com as dimensões exatas de uma vaga de carro de passeio, a caçamba de 4 metros cúbicos suporta materiais de extrema densidade, como restos de alvenaria, pisos, azulejos, argamassa e terra de escavação, permitindo um içamento seguro pelo caminhão sem danificar o asfalto local.
+                                </p>
+                            </div>
+
+                            <!-- 5m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-5m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 5m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Uma excelente escolha intermediária para modernizações completas de casarões ou clínicas. A caçamba de 5 metros cúbicos acomoda a mistura clássica das obras civis: entulho pesado (pedras e cimento) associado a resíduos levemente mais volumosos, como pedaços de madeira, encanamentos substituídos, batentes e portas antigas.
+                                </p>
+                            </div>
+
+                            <!-- 6m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-6m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 6m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Projetada estrategicamente para descartes de alto volume e peso moderado. A caçamba de 6 metros cúbicos é a opção ideal para a remoção de gesso cartonado (drywall) de rebaixamentos, forros de PVC, embalagens plásticas e podas de árvores dos amplos quintais da Vila Galvão. Para não comprometer a segurança do guindaste, ela jamais deve ser preenchida até o limite exclusivamente com terra pura ou concreto.
+                                </p>
+                            </div>
+
+                            <!-- 7m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-7m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 7m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Este equipamento atende de forma eficiente à demanda do forte comércio da Avenida Sete de Setembro e clínicas da região. A caçamba de 7 metros cúbicos possui excelente capacidade interna para o armazenamento de resíduos leves e altamente volumosos da rotina varejista, como rolos de papelão, grandes caixas de embalagens, paletes de madeira e sobras de isolamento.
+                                </p>
+                            </div>
+
+                            <!-- 8m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-8m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 8m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    A maior entre as caçambas estacionárias convencionais. A versão de 8 metros cúbicos é destinada estritamente a resíduos de volume expansivo e baixíssima densidade. Ela é locada principalmente para escoar materiais levíssimos, como plásticos expansivos, espumas e isopor.
+                                </p>
+                            </div>
+
+                            <!-- Roll-on -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-roll-on" class="hover:text-green-700 hover:underline transition-colors">Caçamba Roll-on</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    O sistema Roll-on (ou Roll-on Roll-off) opera com caminhões trucados superpesados e contêineres colossais de 25m³ a 40m³. Devido ao seu peso bruto extremo, tamanho gigantesco e à necessidade de amplo espaço para manobra, essas caçambas não são permitidas ou recomendadas para as ruas residenciais estreitas, arborizadas e de traçado histórico da Vila Galvão, sendo restritas a grandes canteiros de obras estruturais com amplo recuo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100" />
+
+                    <!-- Section 3: Legal Compliance -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-6">
+                            Blindagem Jurídica e Descarte 100% Legalizado
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Realizar obras em bairros de alto padrão e com forte identidade histórica exige garantias sólidas. A contratação de prestadores clandestinos não é uma opção na Vila Galvão. O despejo irregular de entulho suja a cidade e gera processos rigorosos contra o proprietário do imóvel, já que a origem do material pode ser facilmente rastreada pela fiscalização municipal.
+                        </p>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Ao locar nossa frota, a sua reforma está coberta juridicamente de ponta a ponta. Somos uma empresa licenciada pelas autoridades ambientais da Secretaria Municipal de Meio Ambiente (SMMA) e pela Cetesb. Toda a madeira, concreto, gesso e cerâmica extraídos da sua demolição serão transportados para aterros e usinas de reciclagem oficiais. Como prova física dessa destinação sustentável, emitimos e entregamos automaticamente o MTR e o seu CTR (Controle de Transporte de Resíduos).
+                        </p>
+                    </div>
+
+                    <hr class="border-gray-100" />
+
+                    <!-- Section 4: Safety Rules -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-4">
+                            Regras de Segurança para Ruas Tradicionais e Avenidas
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-6">
+                            Para que o nosso guindaste opere de forma rápida e não cause interrupções no trânsito das vias locais, pedimos o cumprimento destas três regras vitais:
+                        </p>
+                        <ul class="space-y-3 text-gray-600 text-base leading-relaxed font-medium pl-2 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Limite Seguro (Sem "Morrinho"):</strong> O limite de segurança da caixa não pode ser violado. O material acumulado acima da borda de aço cai fatalmente no asfalto movimentado durante o transporte, causando acidentes graves e sujeira nas ruas da região.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Apenas Resíduos de Obra (Inertes):</strong> A caçamba foi feita estritamente para resíduos da construção civil (RCC). Jamais utilize o equipamento para descartar lixo orgânico da casa, resíduos químicos, embalagens de tintas ou resíduos hospitalares de clínicas locais.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Não Remaneje a Caçamba:</strong> O motorista calcula o ângulo exato de recolhimento no momento da entrega, desviando de guias rebaixadas e preservando o calçamento antigo. Se a equipe da obra arrastar a caixa, o caminhão não conseguirá engatar as correntes de içamento com segurança.</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Garanta que sua reforma ande rápido e que a rua continue impecável. Fale agora mesmo com nossa equipe pelo WhatsApp, confira nossos preços transparentes e reserve a caçamba ideal para a sua obra na Vila Galvão!
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Sticky Sidebar Card -->
+                <aside class="w-full">
+                    <div class="sticky top-28 bg-green-700 rounded-3xl p-6 sm:p-8 text-center shadow-2xl shadow-green-700/30 text-white">
+                        <span class="inline-block text-xs font-black tracking-widest text-white/90 uppercase mb-4">
+                            ORÇAMENTO GRATUITO
+                        </span>
+                        
+                        <h3 class="text-2xl font-black text-white mb-6 leading-tight tracking-tight">
+                            Interessado em alugar uma caçamba na Vila Galvão?
+                        </h3>
+
+                        <div class="space-y-3 mb-6">
+                            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-[#1c2331] text-white font-black text-sm sm:text-base rounded-xl hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                                Pedir no WhatsApp
+                            </a>
+                            <a href={phoneLink} class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-white text-gray-950 font-black text-sm sm:text-base rounded-xl hover:bg-gray-50 transition-all hover:scale-[1.02] active:scale-95 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.136-7.136l1.292-.97c.363-.271.527-.734.418-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Ligar Agora
+                            </a>
+                        </div>
+
+                        <p class="text-xs font-bold text-white/80 mb-1">
+                            Dúvidas? Fale com nossa equipe:
+                        </p>
+                        <a href={phoneLink} class="text-xl font-black text-white tracking-tight hover:underline block">
+                            (11) 94375-6600
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </div>
+</Layout>

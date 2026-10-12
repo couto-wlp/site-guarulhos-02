@@ -1,0 +1,44 @@
+﻿---
+import { SITE_CONFIG } from '../data/config';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": SITE_CONFIG.name,
+  "image": `${SITE_CONFIG.url}/og-image.jpg`,
+  "url": SITE_CONFIG.url,
+  "telephone": SITE_CONFIG.contact.phone,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": SITE_CONFIG.address.streetAddress,
+    "addressLocality": SITE_CONFIG.address.addressLocality,
+    "addressRegion": SITE_CONFIG.address.addressRegion,
+    "postalCode": SITE_CONFIG.address.postalCode,
+    "addressCountry": SITE_CONFIG.address.addressCountry
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -23.4651,
+    "longitude": -46.5332
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    SITE_CONFIG.social.instagram,
+    SITE_CONFIG.social.facebook
+  ]
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+

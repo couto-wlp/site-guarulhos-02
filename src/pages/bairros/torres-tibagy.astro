@@ -1,0 +1,255 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '../../data/config';
+
+const title = "Aluguel de Caçamba no Torres Tibagy - Obra Limpa";
+const description = "Buscando aluguel de caçamba no Torres Tibagy? Serviço ágil para reformas residenciais com descarte legal (CTR/MTR). Orce agora!";
+const whatsappLink = `https://wa.me/5511943799889?text=${encodeURIComponent("Olá! Gostaria de um orçamento para aluguel de caçamba no Torres Tibagy em Guarulhos.")}`;
+const phoneLink = `tel:+5511943799889`;
+---
+
+<Layout title={title} description={description}>
+    <div class="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 sm:px-6">
+
+        <!-- 1. Hero da Página de Bairro -->
+        <section class="max-w-5xl mx-auto w-full pt-16 pb-12 text-center px-4">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-green-700 text-white font-black text-xs mb-6 uppercase tracking-widest shadow-sm">
+                Atendimento em Guarulhos
+            </span>
+
+            <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+                Aluguel de Caçamba no <span class="text-green-700">Torres Tibagy</span>
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium mb-10">
+                Buscando aluguel de caçamba no Torres Tibagy? Serviço ágil para reformas residenciais com descarte legal (CTR/MTR). Orce agora!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-8 py-4 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Orçamento via WhatsApp
+                </a>
+                <a href="#conteudo" class="inline-flex justify-center items-center px-8 py-4 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 gap-2 w-full sm:w-auto shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    Ver Caçambas
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Three Feature Cards Row -->
+        <section class="max-w-6xl mx-auto w-full my-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1.091m-16.5-3.273v11.455" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Tradição e Sobrados</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Logística cuidadosa entre a Vila Galvão e o Gopoúva, com acesso rápido pelo Anel Viário.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Descarte 100% Legalizado</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Licenciamento completo pela SMMA e Cetesb com emissão imediata de laudo CTR e MTR.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Posicionamento Milimétrico</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Caçamba alinhada na vaga de um veículo preservando garagens, asfalto e árvores locais.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Layout de Conteúdo: Duas Colunas (Texto + Sidebar Sticky) -->
+        <section id="conteudo" class="max-w-6xl mx-auto w-full py-8 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 items-start">
+                
+                <!-- Left Column: White Document Container with 4 Sections -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-sm space-y-12">
+                    
+                    <!-- Section 1: Intro -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-6">
+                            Aluguel de Caçamba no Torres Tibagy: Organização e Descarte Legalizado
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            O Torres Tibagy é um dos bairros residenciais mais tradicionais, arborizados e valorizados de Guarulhos. Situado estrategicamente entre a Vila Galvão e o Gopoúva e cortado pelo Anel Viário, a região destaca-se por seus sobrados de ótimo padrão, praças bem cuidadas e ruas calmas. Quando chega o momento de renovar o imóvel, modernizar cozinhas ou readequar fachadas, manter a estética urbana e o respeito à vizinhança é prioridade. Para que a sua obra avance sem transtornos, o aluguel de caçamba no Torres Tibagy é o recurso fundamental para garantir um canteiro organizado e calçadas 100% livres.
+                        </p>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Acumular restos de cimento, azulejos e gesso na calçada bloqueia a passagem de pedestres, atrai multas da prefeitura e degrada o visual da rua. Nossas caçambas estacionárias confinam o entulho ocupando estritamente a área de uma vaga de carro de passeio. Com caminhões poli-guindaste operados por motoristas experientes, garantimos um posicionamento suave e milimétrico, preservando o asfalto, as garagens e as árvores do seu bairro.
+                        </p>
+                    </div>
+
+                    <hr class="border-gray-100" />
+
+                    <!-- Section 2: Dumpster Sizes (6 cards) -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-3">
+                            Qual o Tamanho de Caçamba Ideal para a Sua Reforma?
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-8">
+                            Escolher o volume correto do equipamento evita custos desnecessários e garante que o içamento do caminhão ocorra com total segurança nas vias residenciais. Conheça as opções disponíveis para o Torres Tibagy:
+                        </p>
+
+                        <div class="space-y-6">
+                            <!-- 4m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-4m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 4m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Este é o modelo padrão e o mais requisitado para reformas residenciais na região. Com as dimensões exatas de uma vaga de carro, a caçamba de 4 metros cúbicos suporta materiais de extrema densidade, como restos de alvenaria, pisos, azulejos, argamassa e terra de escavação, assegurando um transporte livre de sobrecargas.
+                                </p>
+                            </div>
+
+                            <!-- 5m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-5m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 5m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Uma excelente solução intermediária para modernizações completas de sobrados ou clínicas locais. A caçamba de 5 metros cúbicos acomoda a mistura clássica gerada nas obras urbanas: entulho pesado (pedras e cimento) associado a materiais levemente mais volumosos, como pedaços de madeira, encanamentos de PVC substituídos e portas antigas.
+                                </p>
+                            </div>
+
+                            <!-- 6m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-6m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 6m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Projetada estrategicamente para descartes de alto volume e peso moderado. A caçamba de 6 metros cúbicos é a opção ideal para a remoção de gesso cartonado (drywall) de rebaixamentos de teto, forros, embalagens e grandes podas de árvores dos quintais. Para preservar o guindaste do caminhão, ela jamais deve ser preenchida até o limite exclusivamente com terra pura ou concreto.
+                                </p>
+                            </div>
+
+                            <!-- 7m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-7m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 7m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Este modelo atende diretamente à demanda das escolas, escritórios e condomínios de médio porte do bairro. A caçamba de 7 metros cúbicos possui excelente capacidade para resíduos altamente volumosos, como grandes caixas de papelão, paletes de madeira descartados e sobras de isolamento acústico ou térmico.
+                                </p>
+                            </div>
+
+                            <!-- 8m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-8m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 8m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    A maior entre as caçambas estacionárias convencionais. A versão de 8 metros cúbicos é destinada estritamente a resíduos de volume expansivo e baixíssima densidade. É locada majoritariamente para a limpeza de terrenos (folhagens soltas) ou para escoar materiais muito leves, como plásticos expansivos, espumas e isopor.
+                                </p>
+                            </div>
+
+                            <!-- Roll-on -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-roll-on" class="hover:text-green-700 hover:underline transition-colors">Caçamba Roll-on</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    O sistema Roll-on (ou Roll-on Roll-off) é operado por caminhões trucados superpesados e contêineres colossais de 25m³ a 40m³. Devido ao seu peso bruto extremo e à necessidade de amplo espaço de manobra, não são recomendadas para as ruas residenciais tranquilas e arborizadas do Torres Tibagy, sendo restritas a grandes canteiros logísticos ou industriais isolados com recuo plano.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100" />
+
+                    <!-- Section 3: Legal Compliance -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-6">
+                            Blindagem Jurídica e Descarte 100% Legalizado
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Em bairros valorizados, a fiscalização de posturas municipais é constante. Contratar transportadores clandestinos representa um risco jurídico imenso. A lei ambiental é clara e responsabiliza solidariamente o proprietário do imóvel: se o entulho da sua obra for flagrado em áreas de preservação ou terrenos irregulares em Guarulhos, as multas recairão diretamente no seu CPF.
+                        </p>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Ao alugar nossa frota, você elimina qualquer risco legal. Possuímos licenciamento completo junto à Secretaria Municipal de Meio Ambiente (SMMA) e à Cetesb. Todo o resíduo mineral retirado da sua reforma no Torres Tibagy é transportado com segurança para Áreas de Transbordo e Triagem (ATT) para ser reciclado ecologicamente. Para atestar a idoneidade do processo, emitimos automaticamente o MTR e o CTR (Controle de Transporte de Resíduos).
+                        </p>
+                    </div>
+
+                    <hr class="border-gray-100" />
+
+                    <!-- Section 4: Safety Rules -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-4">
+                            Regras de Segurança para Vias Residenciais e Arborizadas
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-6">
+                            Para que a nossa equipe realize a entrega e a retirada de forma ágil e segura, pedimos a colaboração com três normas operacionais:
+                        </p>
+                        <ul class="space-y-3 text-gray-600 text-base leading-relaxed font-medium pl-2 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Limite Seguro (Sem "Morrinho"):</strong> Jamais encha a caçamba acima da borda superior de metal. Entulho transbordando cai inevitavelmente no asfalto durante o transporte, causando sujeira nas ruas do bairro e colocando veículos em risco.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Apenas Resíduos de Obra (Inertes):</strong> A caçamba é destinada estritamente a Resíduos da Construção Civil (RCC). Não deposite lixo orgânico doméstico, resíduos hospitalares de clínicas locais, latas de tintas líquidas ou solventes.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Não Reposicione o Equipamento:</strong> A caixa é instalada com precisão pelo motorista para não bloquear garagens, bueiros ou esbarrar em galhos de árvores. Tentar arrastar a caçamba compromete a estabilidade e o engate das correntes na hora da coleta.</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Sua obra merece fluir com tranquilidade, limpeza e segurança. Fale agora mesmo com nossa equipe via WhatsApp, receba um orçamento transparente e garanta a melhor estrutura de caçambas para a sua reforma no Torres Tibagy!
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Sticky Sidebar Card -->
+                <aside class="w-full">
+                    <div class="sticky top-28 bg-green-700 rounded-3xl p-6 sm:p-8 text-center shadow-2xl shadow-green-700/30 text-white">
+                        <span class="inline-block text-xs font-black tracking-widest text-white/90 uppercase mb-4">
+                            ORÇAMENTO GRATUITO
+                        </span>
+                        
+                        <h3 class="text-2xl font-black text-white mb-6 leading-tight tracking-tight">
+                            Interessado em alugar uma caçamba no Torres Tibagy?
+                        </h3>
+
+                        <div class="space-y-3 mb-6">
+                            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-[#1c2331] text-white font-black text-sm sm:text-base rounded-xl hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                                Pedir no WhatsApp
+                            </a>
+                            <a href={phoneLink} class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-white text-gray-950 font-black text-sm sm:text-base rounded-xl hover:bg-gray-50 transition-all hover:scale-[1.02] active:scale-95 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.136-7.136l1.292-.97c.363-.271.527-.734.418-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Ligar Agora
+                            </a>
+                        </div>
+
+                        <p class="text-xs font-bold text-white/80 mb-1">
+                            Dúvidas? Fale com nossa equipe:
+                        </p>
+                        <a href={phoneLink} class="text-xl font-black text-white tracking-tight hover:underline block">
+                            (11) 94375-6600
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </div>
+</Layout>

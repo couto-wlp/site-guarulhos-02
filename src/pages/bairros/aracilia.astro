@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '../../data/config';
+
+const title = "Aluguel de Caçamba no Aracília - Entrega Rápida";
+const description = "Precisa de aluguel de caçamba no Aracília? Oferecemos descarte legal, emissão de MTR e frota própria para sua obra. Solicite já!";
+const whatsappLink = `https://wa.me/5511943799889?text=${encodeURIComponent("Olá! Gostaria de um orçamento para aluguel de caçamba no bairro Aracília em Guarulhos.")}`;
+const phoneLink = `tel:+5511943799889`;
+---
+
+<Layout title={title} description={description}>
+    <div class="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 sm:px-6">
+
+        <!-- 1. Hero da Página de Bairro -->
+        <section class="max-w-5xl mx-auto w-full pt-16 pb-12 text-center px-4">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-green-700 text-white font-black text-xs mb-6 uppercase tracking-widest shadow-sm">
+                Atendimento em Guarulhos
+            </span>
+
+            <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+                Aluguel de Caçamba no <span class="text-green-700">Aracília</span>
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium mb-10">
+                Precisa de aluguel de caçamba no Aracília? Oferecemos descarte legal, emissão de MTR e frota própria para sua obra. Solicite já!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-8 py-4 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Orçamento via WhatsApp
+                </a>
+                <a href="#conteudo" class="inline-flex justify-center items-center px-8 py-4 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 gap-2 w-full sm:w-auto shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    Ver Caçambas
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Three Feature Cards Row -->
+        <section class="max-w-6xl mx-auto w-full my-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Logística Expressa</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Entrega e remoção ágeis e pontuais no bairro Aracília, garantindo que o cronograma de sua obra ou indústria não pare.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Descarte 100% Legal</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Emissão completa de MTR e CTR, em conformidade com as normas da SMMA Guarulhos e Cetesb.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Posicionamento Seguro</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Motoristas experientes para posicionamento legalizado da caçamba nas vias ou pátios de galpões do Aracília.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Main Two-Column Content (Left: Document / Right: Sticky Sidebar Card) -->
+        <section id="conteudo" class="max-w-6xl mx-auto w-full my-8 pb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-start">
+
+                <!-- Left Column: Content Container -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-sm space-y-10">
+
+                    <!-- Section 1 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Aluguel de Caçamba no Aracília: Gestão de Resíduos para Indústrias e Obras
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                O bairro Aracília, margeando a Rodovia Presidente Dutra em Guarulhos, é um dos mais importantes polos logísticos e industriais da região. Com o fluxo constante de transportadoras, adequações de galpões e manutenções em condomínios comerciais, contar com uma gestão de resíduos eficiente não é apenas uma necessidade, mas uma questão de produtividade. Nosso serviço de aluguel de caçamba no Aracília entrega a agilidade e a segurança jurídica que empresas e construtores exigem, garantindo logística expressa para que sua obra não pare.
+                            </p>
+                            <p>
+                                Com frota própria e motoristas altamente capacitados, programamos entregas e retiradas estratégicas para evitar gargalos no trânsito interno das empresas e nas vias de acesso.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Escolha o Tamanho Ideal para a Sua Necessidade
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Otimizar o escoamento de resíduos passa pela escolha correta do equipamento. Abaixo, detalhamos as opções de caçambas para atender desde pequenas reformas até complexos projetos industriais:
+                        </p>
+                        <ul class="space-y-4 text-gray-600 text-base leading-relaxed font-medium pl-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-4m3" class="text-green-700 hover:underline">Caçamba de 4m³</a>:</strong> Este é o equipamento mais versátil e utilizado na construção civil para obras de pequeno porte e reformas residenciais. Por possuir dimensões compactas, ocupa o espaço de um carro de passeio na rua, sendo perfeita para o descarte de materiais pesados e densos, como concreto, restos de alvenaria, pisos, azulejos e terra, sem risco de sobrecarregar o caminhão.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-5m3" class="text-green-700 hover:underline">Caçamba de 5m³</a>:</strong> Uma solução intermediária ideal para obras comerciais ou reformas de escritórios que mesclam entulho pesado com resíduos levemente volumosos. Esse metro cúbico adicional acomoda perfeitamente uma mistura de restos de construção civil com divisórias, pedaços de gesso, recortes de madeira e portas, oferecendo um excelente custo-benefício.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-6m3" class="text-green-700 hover:underline">Caçamba de 6m³</a>:</strong> Projetada especificamente para materiais de peso moderado e maior volume. É a escolha certa para o descarte de tubulações de PVC, plásticos, grandes quantidades de forro, gesso cartonado (drywall) e podas de árvores. Por razões de segurança viária e capacidade do guindaste, não deve ser preenchida até a borda exclusivamente com terra ou concreto.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-7m3" class="text-green-700 hover:underline">Caçamba de 7m³</a>:</strong> Um equipamento estratégico para o setor logístico e de armazenagem. A caçamba de 7 metros cúbicos atende perfeitamente empresas no Aracília que precisam descartar embalagens grandes, pallets de madeira quebrados, sobras de isolamento térmico e outros resíduos industriais leves, garantindo alta capacidade de armazenamento e reduzindo o número de viagens necessárias.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-8m3" class="text-green-700 hover:underline">Caçamba de 8m³</a>:</strong> A maior opção entre as caçambas estacionárias de rua, voltada estritamente para materiais de altíssimo volume e baixíssima densidade. É amplamente contratada por fábricas e gestores de grandes terrenos para a remoção de folhagens volumosas, plásticos expansivos, espumas e grandes volumes de papelão, escoando material leve de forma rápida.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-roll-on" class="text-green-700 hover:underline">Caçamba Roll-on</a>:</strong> O sistema Roll-on Roll-off é a estrutura definitiva para megaprojetos, indústrias pesadas e demolições. Com capacidades que variam entre 25m³ e 40m³, essas caçambas são gigantescos contêineres operados por caminhões trucados especiais. São indicadas para canteiros que geram dezenas de toneladas de resíduos diariamente e possuem espaço adequado no pátio para manobras e trocas contínuas.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Segurança Jurídica e Descarte 100% Legalizado
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                Empresas instaladas no Aracília lidam frequentemente com auditorias rigorosas, como a certificação ISO 14001. A responsabilidade sobre o resíduo gerado é solidária, o que significa que o descarte clandestino gera multas pesadas tanto para o transportador quanto para o contratante.
+                            </p>
+                            <p>
+                                Ao contratar nosso aluguel de caçamba no Aracília, sua obra opera em total conformidade com a Secretaria Municipal de Meio Ambiente (SMMA) de Guarulhos e a Cetesb. Emitimos o MTR (Manifesto de Transporte de Resíduos) e garantimos que todo o material seja destinado a aterros licenciados ou usinas de reciclagem de inertes — onde tijolos e concreto são triturados para virar base para pavimentação. Fornecemos o CTR (Controle de Transporte de Resíduos), blindando sua empresa contra qualquer passivo ambiental.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Regras de Ocupação de Via e Posicionamento
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            A segurança é inegociável. Nossas caçambas contam com faixas refletivas obrigatórias para máxima visibilidade noturna, evitando acidentes nas vias de grande circulação do bairro. Para garantir um serviço perfeito:
+                        </p>
+                        <ul class="space-y-3 text-gray-600 text-base leading-relaxed font-medium pl-2 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span>O entulho não pode ultrapassar o nível da borda superior, prevenindo a queda de detritos em via pública durante o transporte.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span>É proibido o descarte de lixo orgânico, resíduos hospitalares, solventes, borras de tinta e óleos industriais.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span>O equipamento será sempre estacionado paralelamente ao meio-fio, respeitando guias rebaixadas, pontos de ônibus e o fluxo logístico do seu galpão.</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Solicite agora o seu orçamento via WhatsApp e garanta uma gestão de resíduos ágil, limpa e dentro da lei.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Sticky Sidebar Card -->
+                <aside class="w-full">
+                    <div class="sticky top-28 bg-green-700 rounded-3xl p-6 sm:p-8 text-center shadow-2xl shadow-green-700/30 text-white">
+                        <span class="inline-block text-xs font-black tracking-widest text-white/90 uppercase mb-4">
+                            ORÇAMENTO GRATUITO
+                        </span>
+                        
+                        <h3 class="text-2xl font-black text-white mb-6 leading-tight tracking-tight">
+                            Interessado em alugar uma caçamba no Aracília?
+                        </h3>
+
+                        <div class="space-y-3 mb-6">
+                            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-[#1c2331] text-white font-black text-sm sm:text-base rounded-xl hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                                Pedir no WhatsApp
+                            </a>
+                            <a href={phoneLink} class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-white text-gray-950 font-black text-sm sm:text-base rounded-xl hover:bg-gray-50 transition-all hover:scale-[1.02] active:scale-95 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.136-7.136l1.292-.97c.363-.271.527-.734.418-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Ligar Agora
+                            </a>
+                        </div>
+
+                        <p class="text-xs font-bold text-white/80 mb-1">
+                            Dúvidas? Fale com nossa equipe:
+                        </p>
+                        <a href={phoneLink} class="text-xl font-black text-white tracking-tight hover:underline block">
+                            (11) 94375-6600
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </div>
+</Layout>

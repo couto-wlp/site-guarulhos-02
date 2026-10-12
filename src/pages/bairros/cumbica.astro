@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '../../data/config';
+
+const title = "Aluguel de Caçamba no Cumbica - Rápido e Seguro";
+const description = "Precisa de aluguel de caçamba no Cumbica? Serviço ágil para indústrias e residências com descarte legal e MTR. Peça orçamento!";
+const whatsappLink = `https://wa.me/5511943799889?text=${encodeURIComponent("Olá! Gostaria de um orçamento para aluguel de caçamba no bairro Cumbica em Guarulhos.")}`;
+const phoneLink = `tel:+5511943799889`;
+---
+
+<Layout title={title} description={description}>
+    <div class="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 sm:px-6">
+
+        <!-- 1. Hero da Página de Bairro -->
+        <section class="max-w-5xl mx-auto w-full pt-16 pb-12 text-center px-4">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-green-700 text-white font-black text-xs mb-6 uppercase tracking-widest shadow-sm">
+                Atendimento em Guarulhos
+            </span>
+
+            <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+                Aluguel de Caçamba no <span class="text-green-700">Cumbica</span>
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium mb-10">
+                Precisa de aluguel de caçamba no Cumbica? Serviço ágil para indústrias e residências com descarte legal e MTR. Peça orçamento!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-8 py-4 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Orçamento via WhatsApp
+                </a>
+                <a href="#conteudo" class="inline-flex justify-center items-center px-8 py-4 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 gap-2 w-full sm:w-auto shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    Ver Caçambas
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Three Feature Cards Row -->
+        <section class="max-w-6xl mx-auto w-full my-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25V3.75m0 3.75h3.75" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Logística Industrial e Obras</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Frota pesada e sistema de troca rápida para polos industriais, galpões e casas no Cumbica.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Descarte 100% Legal e Compliance</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Emissão imediata de CTR e MTR, conformidade com SMMA, Cetesb e suporte a auditorias ISO 14001.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Posicionamento Seguro</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Instalação sem obstruir o tráfego de carretas, garagens de transportadoras ou vias de acesso.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Main Two-Column Content (Left: Document / Right: Sticky Sidebar Card) -->
+        <section id="conteudo" class="max-w-6xl mx-auto w-full my-8 pb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-start">
+
+                <!-- Left Column: Content Container -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-sm space-y-10">
+
+                    <!-- Section 1 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Aluguel de Caçamba no Cumbica: Logística para Indústrias e Obras
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                O bairro de Cumbica é o grande motor econômico e logístico de Guarulhos. Sede do Aeroporto Internacional e cercado pelas rodovias Dutra e Ayrton Senna, a região abriga um dos maiores parques industriais do país. Com a construção incessante de novos galpões, pavimentação de pátios e adequações de grandes plantas fabris, a gestão de resíduos não tem margem para erros ou atrasos. É neste cenário de alta exigência que o nosso serviço de aluguel de caçamba no Cumbica atua, entregando logística expressa, frota pesada e conformidade ambiental rigorosa.
+                            </p>
+                            <p>
+                                Para que a sua linha de produção ou obra não pare, oferecemos o sistema de troca rápida para o setor corporativo, além de atendimento consultivo completo para as reformas residenciais que também movimentam o bairro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Qual o Tamanho de Caçamba Ideal para sua Necessidade?
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            O perfil misto de Cumbica, que vai desde reformas em casas até a demolição de galpões, exige soluções dimensionadas. Escolher o equipamento correto otimiza o fluxo de trabalho e evita multas por excesso de peso. Confira as opções:
+                        </p>
+                        <ul class="space-y-4 text-gray-600 text-base leading-relaxed font-medium pl-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-4m3" class="text-green-700 hover:underline">Caçamba de 4m³</a>:</strong> O equipamento mais tradicional para obras residenciais e adequações comerciais de pequeno porte. Com o tamanho exato de uma vaga de estacionamento padrão, a caçamba de 4 metros cúbicos é a escolha mais segura para o descarte de materiais extremamente densos e pesados, como blocos de concreto, asfalto fresado, terra de escavação, pisos e alvenaria.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-5m3" class="text-green-700 hover:underline">Caçamba de 5m³</a>:</strong> Uma excelente solução intermediária para projetos que mesclam resíduos estruturais com materiais de acabamento. A caçamba de 5 metros cúbicos oferece um fôlego extra, acomodando a mistura de entulho pesado com resíduos levemente mais volumosos, como pedaços de madeira, encanamentos antigos, portas e recortes de gesso.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-6m3" class="text-green-700 hover:underline">Caçamba de 6m³</a>:</strong> Projetada especificamente para o acondicionamento de materiais de volume alto e peso moderado. A caçamba de 6 metros cúbicos é amplamente requisitada em Cumbica para descartar placas de drywall, forros, tubulações de PVC, plásticos de embalagens e podas de árvores. Para proteger o sistema de içamento do caminhão, ela não deve ser preenchida até o limite apenas com terra ou concreto maciço.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-7m3" class="text-green-700 hover:underline">Caçamba de 7m³</a>:</strong> Este modelo é estratégico para centros de distribuição e galpões logísticos. A caçamba de 7 metros cúbicos possui excelente capacidade interna para armazenar resíduos industriais leves e muito volumosos, como grandes embalagens, paletes de madeira descartados, papelão em grande escala e sobras de isolamento térmico, reduzindo o número de trocas durante o expediente.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-8m3" class="text-green-700 hover:underline">Caçamba de 8m³</a>:</strong> Sendo a maior entre as caçambas estacionárias convencionais, a versão de 8 metros cúbicos é voltada estritamente para materiais de grande volume e baixíssima densidade. Ela é ideal para limpezas de extensas áreas verdes industriais ou para escoar resíduos muito leves das linhas de produção, como plásticos expansivos, isopor e espumas.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-roll-on" class="text-green-700 hover:underline">Caçamba Roll-on</a>:</strong> O sistema Roll-on (ou Roll-on Roll-off) é a força-tarefa definitiva para as indústrias pesadas e megaprojetos de engenharia em Cumbica. Operando como contêineres gigantes, essas caçambas possuem capacidades que variam de 25m³ a 40m³. São transportadas por caminhões trucados robustos e indicadas unicamente para canteiros e pátios industriais que geram dezenas de toneladas de resíduos diariamente e que possuem amplo espaço de manobra.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Cumprimento de Normas ISO e Descarte 100% Legalizado
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                Para o setor corporativo de Cumbica, o gerenciamento de resíduos vai muito além da limpeza; é uma questão de compliance. Transportadores irregulares colocam em risco certificações importantes, como a ISO 14001, pois a responsabilidade ambiental sobre o descarte clandestino recai diretamente sobre o CNPJ gerador.
+                            </p>
+                            <p>
+                                Ao contratar nossos serviços, sua empresa tem segurança jurídica absoluta. Somos licenciados pela Secretaria Municipal de Meio Ambiente (SMMA) e pela Cetesb. Cada operação de remoção gera automaticamente o CTR (Controle de Transporte de Resíduos) e o MTR, atestando que os materiais inertes foram direcionados a usinas de triagem licenciadas para reciclagem, blindando sua obra contra passivos ambientais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Regras Críticas de Operação e Descarte Industrial
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Para operar com segurança no intenso tráfego logístico de Cumbica, nossas diretrizes são rigorosas:
+                        </p>
+                        <ul class="space-y-3 text-gray-600 text-base leading-relaxed font-medium pl-2 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Controle de Peso e Volume:</strong> O entulho não pode ultrapassar o nível da borda da caçamba. O excesso de volume (o "morrinho") causa derramamentos perigosos nas rodovias e avenidas de alta velocidade da região.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Proibição de Resíduos Perigosos (Classe I):</strong> É estritamente proibido descartar resíduos industriais perigosos na caçamba comum. Borras de tinta, solventes químicos, óleos lubrificantes, estopas contaminadas e lixo hospitalar exigem destinação e veículos específicos.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Posicionamento:</strong> A caçamba será instalada respeitando a fluidez do trânsito, sem obstruir o raio de giro de carretas, garagens de transportadoras ou pontos de ônibus.</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Sua indústria ou residência merece um parceiro forte na gestão de resíduos. Entre em contato com a nossa equipe agora mesmo pelo WhatsApp, alinhe sua demanda de volume e garanta orçamentos claros, sem taxas ocultas e com logística de ponta!
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Sticky Sidebar Card -->
+                <aside class="w-full">
+                    <div class="sticky top-28 bg-green-700 rounded-3xl p-6 sm:p-8 text-center shadow-2xl shadow-green-700/30 text-white">
+                        <span class="inline-block text-xs font-black tracking-widest text-white/90 uppercase mb-4">
+                            ORÇAMENTO GRATUITO
+                        </span>
+                        
+                        <h3 class="text-2xl font-black text-white mb-6 leading-tight tracking-tight">
+                            Interessado em alugar uma caçamba no Cumbica?
+                        </h3>
+
+                        <div class="space-y-3 mb-6">
+                            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-[#1c2331] text-white font-black text-sm sm:text-base rounded-xl hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                                Pedir no WhatsApp
+                            </a>
+                            <a href={phoneLink} class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-white text-gray-950 font-black text-sm sm:text-base rounded-xl hover:bg-gray-50 transition-all hover:scale-[1.02] active:scale-95 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.136-7.136l1.292-.97c.363-.271.527-.734.418-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Ligar Agora
+                            </a>
+                        </div>
+
+                        <p class="text-xs font-bold text-white/80 mb-1">
+                            Dúvidas? Fale com nossa equipe:
+                        </p>
+                        <a href={phoneLink} class="text-xl font-black text-white tracking-tight hover:underline block">
+                            (11) 94375-6600
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </div>
+</Layout>

@@ -1,0 +1,255 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '../../data/config';
+
+const title = "Aluguel de Caçamba na Vila Barros: Rápido e Seguro";
+const description = "Buscando aluguel de caçamba na Vila Barros? Serviço ágil para reformas, descarte legalizado e emissão de laudo CTR. Orce agora!";
+const whatsappLink = `https://wa.me/5511943799889?text=${encodeURIComponent("Olá! Gostaria de um orçamento para aluguel de caçamba na Vila Barros em Guarulhos.")}`;
+const phoneLink = `tel:+5511943799889`;
+---
+
+<Layout title={title} description={description}>
+    <div class="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 sm:px-6">
+
+        <!-- 1. Hero da Página de Bairro -->
+        <section class="max-w-5xl mx-auto w-full pt-16 pb-12 text-center px-4">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-green-700 text-white font-black text-xs mb-6 uppercase tracking-widest shadow-sm">
+                Atendimento em Guarulhos
+            </span>
+
+            <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+                Aluguel de Caçamba na <span class="text-green-700">Vila Barros</span>
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium mb-10">
+                Buscando aluguel de caçamba na Vila Barros? Serviço ágil para reformas, descarte legalizado e emissão de laudo CTR. Orce agora!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-8 py-4 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Orçamento via WhatsApp
+                </a>
+                <a href="#conteudo" class="inline-flex justify-center items-center px-8 py-4 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 gap-2 w-full sm:w-auto shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    Ver Caçambas
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Three Feature Cards Row -->
+        <section class="max-w-6xl mx-auto w-full my-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25V3.75m0 3.75h3.75" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Dinamismo e Tradição</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Atendimento pontual próximo à Av. Monteiro Lobato, Paço Municipal e Aeroporto.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Descarte 100% Legalizado</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Alvará completo com SMMA e Cetesb, com emissão de CTR e MTR contra multas.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Calçadas Sempre Livres</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Equipamento de aço robusto ocupando apenas a vaga de um carro sem barrar pedestres.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Layout de Conteúdo: Duas Colunas (Texto + Sidebar Sticky) -->
+        <section id="conteudo" class="max-w-6xl mx-auto w-full py-8 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 items-start">
+                
+                <!-- Left Column: White Document Container with 4 Sections -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-sm space-y-12">
+                    
+                    <!-- Section 1: Intro -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-6">
+                            Aluguel de Caçamba na Vila Barros: Agilidade e Obra Limpa
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            A Vila Barros é uma região essencialmente dinâmica e trabalhadora, com excelente localização, próxima à Avenida Monteiro Lobato, ao Paço Municipal e ao Aeroporto Internacional de Guarulhos. Sendo um bairro tradicionalmente residencial que abraçou um forte comércio local, o cenário é de renovação contínua: famílias reformando banheiros, trocando telhados e pequenos empreendedores adequando espaços para novos negócios. Com ruas frequentemente movimentadas e calçadas estreitas, o aluguel de caçamba na Vila Barros é o serviço indispensável para garantir que a sujeira da sua construção não se transforme em um transtorno para a vizinhança.
+                        </p>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Deixar restos de cimento, sacos de areia e blocos triturados na calçada obstrui a passagem de pedestres, atrai multas e permite que a chuva leve a areia para as bocas de lobo, causando alagamentos na rua. Nossas caçambas estacionárias resolvem esse problema de forma imediata: entregamos um equipamento de aço robusto que ocupa o exato espaço de uma vaga de carro, mantendo a sua calçada 100% livre, limpa e segura para a circulação local.
+                        </p>
+                    </div>
+
+                    <hr class="border-gray-100" />
+
+                    <!-- Section 2: Dumpster Sizes (6 cards) -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-3">
+                            Qual o Tamanho de Caçamba Ideal para a Sua Obra?
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-8">
+                            Dimensionar corretamente a capacidade do equipamento evita custos extras e garante a segurança do içamento do caminhão nas ruas da região. Conheça as opções disponíveis para atender ao dinamismo da Vila Barros:
+                        </p>
+
+                        <div class="space-y-6">
+                            <!-- 4m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-4m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 4m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    O modelo padrão e o mais requisitado para a autoconstrução e reformas residenciais. Com as dimensões exatas de uma vaga de carro de passeio, a caçamba de 4 metros cúbicos é perfeita para materiais de extrema densidade, como restos de alvenaria, pisos, azulejos, argamassa e terra de escavação, assegurando um transporte seguro sem sobrecarregar o sistema hidráulico.
+                                </p>
+                            </div>
+
+                            <!-- 5m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-5m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 5m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Uma excelente escolha intermediária para modernizações completas de residências ou adequações comerciais. A caçamba de 5 metros cúbicos acomoda a mistura clássica das obras civis: entulho pesado (pedras e blocos) associado a materiais levemente mais volumosos, como pedaços de madeira, encanamentos substituídos e portas antigas.
+                                </p>
+                            </div>
+
+                            <!-- 6m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-6m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 6m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Projetada estrategicamente para descartes de alto volume e peso moderado. A caçamba de 6 metros cúbicos é a opção ideal para a remoção de gesso cartonado (drywall), forros de PVC, embalagens plásticas e madeiramento de telhados antigos. Para não comprometer a segurança do guindaste, ela jamais deve ser preenchida até o limite exclusivamente com terra pura ou concreto.
+                                </p>
+                            </div>
+
+                            <!-- 7m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-7m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 7m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    Este equipamento atende de forma eficiente à forte demanda dos comércios e lojas da Vila Barros. A caçamba de 7 metros cúbicos possui excelente capacidade interna para o armazenamento de resíduos leves e altamente volumosos da rotina varejista, como rolos de papelão, grandes caixas de embalagens, paletes de madeira e sobras de isolamento.
+                                </p>
+                            </div>
+
+                            <!-- 8m³ -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-8m3" class="hover:text-green-700 hover:underline transition-colors">Caçamba de 8m³</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    A maior entre as caçambas estacionárias convencionais. A versão de 8 metros cúbicos é destinada estritamente a resíduos de volume expansivo e baixíssima densidade. Ela é locada principalmente para a limpeza de terrenos com vegetação leve ou para escoar materiais levíssimos, como plásticos expansivos, espumas e isopor.
+                                </p>
+                            </div>
+
+                            <!-- Roll-on -->
+                            <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50/50">
+                                <h3 class="text-xl font-black text-gray-900 mb-2"><a href="/servicos/cacamba-roll-on" class="hover:text-green-700 hover:underline transition-colors">Caçamba Roll-on</a></h3>
+                                <p class="text-gray-600 text-sm leading-relaxed font-medium">
+                                    O sistema Roll-on (ou Roll-on Roll-off) é operado por caminhões trucados e comporta contêineres colossais de 25m³ a 40m³. Devido ao seu peso bruto extremo e à necessidade de amplo espaço para manobra, não são recomendadas para as ruas residenciais ou vias de comércio estreitas da Vila Barros, sendo restritas apenas aos grandes galpões logísticos situados nas vias de acesso ao Aeroporto, que possuem recuo compatível.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100" />
+
+                    <!-- Section 3: Legal Compliance -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-6">
+                            Blindagem Jurídica e Descarte 100% Legalizado
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Muitas vezes, visando economizar poucos reais, moradores contratam carroceiros ou empresas clandestinas sem placa. O resultado é o despejo criminoso desse lixo em terrenos vazios da própria Vila Barros ou na periferia. A lei municipal é rigorosa e responsabiliza solidariamente o gerador do resíduo (o dono da casa ou do comércio) pelas pesadas multas ambientais.
+                        </p>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Ao locar conosco, o seu CPF ou CNPJ ganha blindagem jurídica absoluta. Somos licenciados pela Secretaria Municipal de Meio Ambiente (SMMA) e pela Cetesb. Todo o material inerte retirado da sua reforma é encaminhado para usinas de reciclagem e aterros autorizados. Comprovamos a legalidade da operação emitindo automaticamente o MTR e o CTR (Controle de Transporte de Resíduos), atestando o seu compromisso com a cidade de Guarulhos.
+                        </p>
+                    </div>
+
+                    <hr class="border-gray-100" />
+
+                    <!-- Section 4: Safety Rules -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-4">
+                            Regras de Segurança para Vias Residenciais e Comerciais
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-6">
+                            Para garantir um escoamento rápido e manter a segurança no trânsito pulsante do bairro, siga estas três diretrizes vitais:
+                        </p>
+                        <ul class="space-y-3 text-gray-600 text-base leading-relaxed font-medium pl-2 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Limite Seguro (Sem "Morrinho"):</strong> O entulho não pode, sob nenhuma hipótese, ultrapassar as bordas de aço da caçamba. O excesso de carga escorrega para a via pública durante as curvas do caminhão, gerando riscos gravíssimos a pedestres e veículos.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Apenas Resíduos de Obra (Inertes):</strong> A nossa licença abrange materiais da construção civil. É expressamente proibido o descarte de lixo orgânico doméstico, sobras de alimentos, fraldas ou produtos químicos (tintas líquidas e solventes).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Espaço de Manobra Livre:</strong> A caçamba é instalada e alinhada pelo motorista para não bloquear a drenagem da chuva. Garanta que seus vizinhos ou clientes não estacionem veículos "colados" ao equipamento no dia da retirada, permitindo o engate seguro do guindaste.</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            A sua reforma não pode parar por falta de espaço e organização. Entre em contato com a nossa central de atendimento via WhatsApp, conheça nossos planos de locação e deixe a remoção do entulho pesado com os verdadeiros especialistas da região!
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Sticky Sidebar Card -->
+                <aside class="w-full">
+                    <div class="sticky top-28 bg-green-700 rounded-3xl p-6 sm:p-8 text-center shadow-2xl shadow-green-700/30 text-white">
+                        <span class="inline-block text-xs font-black tracking-widest text-white/90 uppercase mb-4">
+                            ORÇAMENTO GRATUITO
+                        </span>
+                        
+                        <h3 class="text-2xl font-black text-white mb-6 leading-tight tracking-tight">
+                            Interessado em alugar uma caçamba na Vila Barros?
+                        </h3>
+
+                        <div class="space-y-3 mb-6">
+                            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-[#1c2331] text-white font-black text-sm sm:text-base rounded-xl hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                                Pedir no WhatsApp
+                            </a>
+                            <a href={phoneLink} class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-white text-gray-950 font-black text-sm sm:text-base rounded-xl hover:bg-gray-50 transition-all hover:scale-[1.02] active:scale-95 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.136-7.136l1.292-.97c.363-.271.527-.734.418-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Ligar Agora
+                            </a>
+                        </div>
+
+                        <p class="text-xs font-bold text-white/80 mb-1">
+                            Dúvidas? Fale com nossa equipe:
+                        </p>
+                        <a href={phoneLink} class="text-xl font-black text-white tracking-tight hover:underline block">
+                            (11) 94375-6600
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </div>
+</Layout>

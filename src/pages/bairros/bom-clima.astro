@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '../../data/config';
+
+const title = "Aluguel de Caçamba no Bom Clima: Rápido e Seguro";
+const description = "Precisando de aluguel de caçamba no Bom Clima? Oferecemos descarte legalizado, emissão de CTR e agilidade para sua obra. Ligue já!";
+const whatsappLink = `https://wa.me/5511943799889?text=${encodeURIComponent("Olá! Gostaria de um orçamento para aluguel de caçamba no bairro Bom Clima em Guarulhos.")}`;
+const phoneLink = `tel:+5511943799889`;
+---
+
+<Layout title={title} description={description}>
+    <div class="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 sm:px-6">
+
+        <!-- 1. Hero da Página de Bairro -->
+        <section class="max-w-5xl mx-auto w-full pt-16 pb-12 text-center px-4">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-green-700 text-white font-black text-xs mb-6 uppercase tracking-widest shadow-sm">
+                Atendimento em Guarulhos
+            </span>
+
+            <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+                Aluguel de Caçamba no <span class="text-green-700">Bom Clima</span>
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium mb-10">
+                Precisando de aluguel de caçamba no Bom Clima? Oferecemos descarte legalizado, emissão de CTR e agilidade para sua obra. Ligue já!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-8 py-4 bg-green-700 text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-green-700/40 gap-2 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Orçamento via WhatsApp
+                </a>
+                <a href="#conteudo" class="inline-flex justify-center items-center px-8 py-4 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 gap-2 w-full sm:w-auto shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    Ver Caçambas
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Three Feature Cards Row -->
+        <section class="max-w-6xl mx-auto w-full my-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Logística Expressa</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Entrega e remoção rápidas e pontuais no bairro Bom Clima, mantendo o canteiro de sua obra limpo e acessível.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Descarte 100% Legal</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Emissão de CTR e MTR com conformidade total às normas da SMMA Guarulhos e destinação a ATTs certificadas.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-xl bg-green-700 text-white flex items-center justify-center font-black mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-black text-gray-900 mb-2 tracking-tight">Posicionamento Seguro</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Motoristas experientes para posicionamento correto e regularizado em vias públicas rente à guia no Bom Clima.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Main Two-Column Content (Left: Document / Right: Sticky Sidebar Card) -->
+        <section id="conteudo" class="max-w-6xl mx-auto w-full my-8 pb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-start">
+
+                <!-- Left Column: Content Container -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-sm space-y-10">
+
+                    <!-- Section 1 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Aluguel de Caçamba no Bom Clima: Gestão de Resíduos Ágil e Legalizada
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                O bairro Bom Clima é o verdadeiro coração administrativo de Guarulhos. Sede da Prefeitura (Paço Municipal), de importantes hospitais, clínicas e de um comércio pulsante, a região possui um tráfego intenso de veículos e pedestres. Realizar qualquer reforma ou adequação comercial nessa área exige planejamento logístico impecável. É por isso que o nosso serviço de aluguel de caçamba no Bom Clima foca em agilidade, segurança e total respeito às leis de trânsito, garantindo que o seu cronograma avance sem paralisações ou multas.
+                            </p>
+                            <p>
+                                Deixar entulho acumulado nas calçadas de uma região tão movimentada é uma infração grave. Com a nossa frota dedicada e motoristas altamente treinados, entregamos e retiramos o equipamento de forma expressa, mantendo o canteiro da sua obra limpo e acessível.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Qual o Tamanho de Caçamba Ideal para sua Necessidade?
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Acertar no volume do equipamento evita viagens desnecessárias e sobrecarga de peso, otimizando o orçamento da sua obra. Conheça nossas opções e suas indicações:
+                        </p>
+                        <ul class="space-y-4 text-gray-600 text-base leading-relaxed font-medium pl-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-4m3" class="text-green-700 hover:underline">Caçamba de 4m³</a>:</strong> É o modelo mais tradicional, perfeito para reformas residenciais, pequenos consultórios e adequações comerciais rápidas. Graças ao seu tamanho compacto, que ocupa exatamente a vaga de um carro de passeio, a caçamba de 4 metros cúbicos é a escolha certa para descartar resíduos densos e pesados, como concreto, restos de alvenaria, pisos, azulejos e terra, sem risco de excesso de peso para o caminhão.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-5m3" class="text-green-700 hover:underline">Caçamba de 5m³</a>:</strong> Uma excelente opção intermediária para quem precisa de um pouco mais de espaço sem perder a versatilidade. A caçamba de 5 metros cúbicos é ideal para acomodar uma mistura de entulho pesado com materiais levemente mais volumosos, como pedaços de gesso, recortes de madeira, portas e tubulações antigas retiradas durante a modernização do seu imóvel.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-6m3" class="text-green-700 hover:underline">Caçamba de 6m³</a>:</strong> Projetada especificamente para materiais de peso moderado e volume alto. A caçamba de 6 metros cúbicos é muito solicitada no Bom Clima para o descarte de placas de gesso cartonado (drywall), forros antigos, plásticos e podas de árvores. Por questões de segurança viária, ela não deve ser preenchida até o limite com materiais pesados (como terra pura), preservando o sistema hidráulico de içamento.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-7m3" class="text-green-700 hover:underline">Caçamba de 7m³</a>:</strong> Este equipamento atende diretamente à demanda de comércios maiores e obras estruturais. A caçamba de 7 metros cúbicos possui excelente capacidade interna para armazenar resíduos industriais e comerciais volumosos, como grandes embalagens, paletes de madeira quebrados, sobras de isolamento acústico e papelão, diminuindo a frequência de trocas.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-8m3" class="text-green-700 hover:underline">Caçamba de 8m³</a>:</strong> A maior opção entre as caçambas estacionárias de rua, voltada estritamente para materiais de grande volume e baixíssima densidade. Ela é amplamente locada para limpezas de grandes terrenos ou para o escoamento rápido de resíduos muito leves, como espumas, plásticos expansivos e isopor em grande quantidade.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong><a href="/servicos/cacamba-roll-on" class="text-green-700 hover:underline">Caçamba Roll-on</a>:</strong> O sistema Roll-on (ou Roll-on Roll-off) é a solução definitiva para demolições completas, construção de novos edifícios e megaprojetos. Movimentadas por caminhões trucados especiais, essas caçambas operam como contêineres colossais, variando entre 25m³ e 40m³. São indicadas exclusivamente para canteiros que geram toneladas de resíduos diariamente e possuem amplo espaço para a manobra dos veículos pesados.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Segurança Jurídica e Descarte 100% Legalizado
+                        </h2>
+                        <div class="space-y-4 text-gray-600 text-base leading-relaxed font-medium">
+                            <p>
+                                Em uma área com intensa fiscalização como o Bom Clima, a segurança jurídica não tem preço. Contratar empresas clandestinas que despejam entulho em locais irregulares configura crime ambiental, e o proprietário da obra responde solidariamente.
+                            </p>
+                            <p>
+                                Ao fechar seu aluguel de caçamba no Bom Clima conosco, você tem a garantia de um serviço 100% legalizado. Seguimos todas as diretrizes da Secretaria Municipal de Meio Ambiente (SMMA) de Guarulhos. Ao final da locação, emitimos o MTR (Manifesto de Transporte de Resíduos) e o CTR (Controle de Transporte de Resíduos), comprovando que o seu entulho foi destinado a Áreas de Transbordo e Triagem (ATT) certificadas, onde o resíduo inerte é transformado em brita reciclada e o rejeito vai para aterros autorizados.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div>
+                        <h2 class="text-2xl sm:text-[26px] font-black text-gray-900 mb-4 tracking-tight">
+                            Regras de Segurança e Proibições
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium mb-4">
+                            Para garantir um processo eficiente e seguro nas movimentadas vias do Bom Clima, observe as seguintes regras:
+                        </p>
+                        <ul class="space-y-3 text-gray-600 text-base leading-relaxed font-medium pl-2 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Posicionamento:</strong> A caçamba será colocada rente à guia, respeitando o fluxo de veículos. Não bloqueamos faixas de pedestres, guias rebaixadas ou pontos de ônibus.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Limite Seguro:</strong> O entulho jamais deve ultrapassar a borda superior do equipamento (sem o "morrinho"). O excesso causa derramamento na via pública, gerando multas e acidentes.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-700 font-bold">•</span>
+                                <span><strong>Atenção ao Lixo Hospitalar:</strong> Devido ao grande número de clínicas e hospitais na região, reforçamos que é estritamente proibido o descarte de lixo hospitalar, materiais biológicos, produtos químicos e lixo orgânico na caçamba de construção civil.</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 text-base leading-relaxed font-medium">
+                            Precisa de agilidade e responsabilidade na sua obra? Fale agora mesmo com nossa equipe pelo WhatsApp, receba um orçamento transparente e agende a sua caçamba!
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Sticky Sidebar Card -->
+                <aside class="w-full">
+                    <div class="sticky top-28 bg-green-700 rounded-3xl p-6 sm:p-8 text-center shadow-2xl shadow-green-700/30 text-white">
+                        <span class="inline-block text-xs font-black tracking-widest text-white/90 uppercase mb-4">
+                            ORÇAMENTO GRATUITO
+                        </span>
+                        
+                        <h3 class="text-2xl font-black text-white mb-6 leading-tight tracking-tight">
+                            Interessado em alugar uma caçamba no Bom Clima?
+                        </h3>
+
+                        <div class="space-y-3 mb-6">
+                            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-[#1c2331] text-white font-black text-sm sm:text-base rounded-xl hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                                Pedir no WhatsApp
+                            </a>
+                            <a href={phoneLink} class="flex items-center justify-center gap-2 w-full py-4 px-6 bg-white text-gray-950 font-black text-sm sm:text-base rounded-xl hover:bg-gray-50 transition-all hover:scale-[1.02] active:scale-95 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.136-7.136l1.292-.97c.363-.271.527-.734.418-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Ligar Agora
+                            </a>
+                        </div>
+
+                        <p class="text-xs font-bold text-white/80 mb-1">
+                            Dúvidas? Fale com nossa equipe:
+                        </p>
+                        <a href={phoneLink} class="text-xl font-black text-white tracking-tight hover:underline block">
+                            (11) 94375-6600
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </div>
+</Layout>
