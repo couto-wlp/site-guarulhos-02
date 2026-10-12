@@ -1,7 +1,7 @@
 ---
 title: "Caçamba Roll-on"
 description: "Aluguel de Caçamba Roll-on em Guarulhos. Equipamento de alta capacidade para as grandes indústrias e os maiores eventos."
-image: "/cacamba-.webp"
+image: "/cacamba-roll-on.webp"
 ---
 
 Quando a gestão de resíduos atinge proporções monumentais, as caçambas tradicionais deixam de ser suficientes. O sistema Roll-on / Roll-off é a resposta de maquinário pesado para atender à altíssima demanda de indústrias, shopping centers, centros logísticos e grandes demolições em Guarulhos. Projetada para escoar volumes extremos com velocidade mecânica, esta estrutura mantém a sua linha de produção ou megacanteiro de obras sempre limpo e operacional.

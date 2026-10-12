@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 7m³"
 description: "Aluguel de Caçamba de 7m³ em Guarulhos. A melhor escolha para grandes geradores e áreas industriais com muita agilidade."
-image: "/cacamba-.webp"
+image: "/cacamba-7m.webp"
 ---
 
 Quando a sua obra atinge escala industrial, você precisa de uma solução robusta que evite gargalos na operação. A caçamba de 7m³ é o equipamento de maior capacidade da nossa frota, desenvolvido estrategicamente para atender grandes construtoras, condomínios logísticos e centros comerciais em Guarulhos. Com ela, você garante que o seu canteiro de obras ou linha de produção jamais pare por falta de espaço para o descarte.
