@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  url: "https://diskcacambaguarulhos.com.br", // Domínio temporário
+  url: "https://www.alugacacambagarantido.com.br",
   name: "DiskCaçamba Guarulhos",
   description: "A melhor opção de aluguel de caçambas em Guarulhos. Atendimento rápido, descarte correto e orçamento sem compromisso.",
   address: {

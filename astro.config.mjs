@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-  site: 'https://diskcacambaguarulhos.com.br',
+  site: 'https://www.alugacacambagarantido.com.br',
   output: 'static',
   server: {
     host: true,
