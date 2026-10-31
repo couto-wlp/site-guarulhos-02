@@ -63,10 +63,10 @@ const servicosDestaque = todosServicos.slice(0, 9);
 			<p class="text-gray-600 text-base">Soluções na medida certa para o volume do seu entulho.</p>
 		</div>
 		
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
 			{servicosDestaque.length > 0 ? servicosDestaque.map(servico => (
-				<a href={`/servicos/${servico.id}`} class="block bg-white p-6 md:p-8 rounded-3xl border-2 border-gray-100 hover:border-primary transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 group">
-					<div class="aspect-[4/3] mb-6 flex items-center justify-center overflow-hidden rounded-2xl bg-white">
+				<a href={`/servicos/${servico.id}`} class="block bg-white p-5 md:p-6 rounded-2xl border-2 border-gray-100 hover:border-primary transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 group">
+					<div class="aspect-video mb-5 flex items-center justify-center overflow-hidden rounded-xl bg-white">
 						<img 
 							src={(servico.data.image ? servico.data.image.replace(/\.(png|jpg|jpeg)$/, '.webp') : "/cacamba-verde.webp")} 
 							alt={servico.data.title} 
@@ -77,8 +77,8 @@ const servicosDestaque = todosServicos.slice(0, 9);
 							class="w-full h-full object-cover mix-blend-multiply scale-110 group-hover:scale-125 transition-transform duration-500" 
 						/>
 					</div>
-					<h3 class="text-xl md:text-2xl font-black text-gray-900 mb-4 group-hover:text-primary transition-colors tracking-tighter">{servico.data.title}</h3>
-					<p class="text-gray-600 text-base leading-relaxed mb-4">{servico.data.description}</p>
+					<h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-primary transition-colors tracking-tighter">{servico.data.title}</h3>
+					<p class="text-gray-600 text-sm md:text-base leading-relaxed mb-3">{servico.data.description}</p>
 					<span class="text-green-700 font-bold group-hover:text-primary transition-colors flex items-center gap-2">
 						Saiba mais
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
