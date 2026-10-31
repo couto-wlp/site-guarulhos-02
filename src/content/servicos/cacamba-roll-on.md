@@ -1,5 +1,5 @@
 ---
-title: "Caçamba Roll-on"
+title: "Caçamba de Entulho Roll-on"
 description: "Aluguel de Caçamba Roll-on em Guarulhos. Equipamento de alta capacidade para as grandes indústrias e os maiores eventos."
 image: "/cacamba-roll-on.webp"
 ---

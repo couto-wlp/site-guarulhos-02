@@ -1,5 +1,5 @@
 ---
-title: "Caçamba de 5m³"
+title: "Caçamba de Entulho 5m³"
 description: "Locação de Caçamba de 5m³ em Guarulhos. A escolha ideal para as reformas médias e remoção de grandes volumes de entulho."
 image: "/cacamba-5m.webp"
 ---

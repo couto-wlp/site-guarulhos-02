@@ -1,5 +1,5 @@
 ---
-title: "Caçamba de 8m³"
+title: "Caçamba de Entulho 8m³"
 description: "Aluguel de Caçamba de 8m³ em Guarulhos. A maior capacidade total do mercado para grandes obras logísticas e industriais."
 image: "/cacamba-8m.webp"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Caçamba de 7m³"
+title: "Caçamba de Entulho 7m³"
 description: "Aluguel de Caçamba de 7m³ em Guarulhos. A melhor escolha para grandes geradores e áreas industriais com muita agilidade."
 image: "/cacamba-7m.webp"
 ---
