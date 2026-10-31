@@ -4,6 +4,63 @@ import Layout from '../layouts/Layout.astro';
 
 const todosServicos = await getCollection('servicos');
 const servicosDestaque = todosServicos.slice(0, 9);
+const bairrosAtendidos = [
+	['agua-azul', 'Água Azul'],
+	['agua-chata', 'Água Chata'],
+	['aracilia', 'Aracília'],
+	['bananal', 'Bananal'],
+	['bela-vista', 'Bela Vista'],
+	['bom-clima', 'Bom Clima'],
+	['bonsucesso', 'Bonsucesso'],
+	['bosque-maia', 'Bosque Maia'],
+	['cabucu', 'Cabuçu'],
+	['cabucu-de-cima', 'Cabuçu de Cima'],
+	['capelinha', 'Capelinha'],
+	['cecap', 'CECAP'],
+	['centro', 'Centro'],
+	['cocaia', 'Cocaia'],
+	['cumbica', 'Cumbica'],
+	['fatima', 'Fátima'],
+	['fortaleza', 'Fortaleza'],
+	['gopouva', 'Gopoúva'],
+	['invernada', 'Invernada'],
+	['itaim', 'Itaim'],
+	['itapegica', 'Itapegica'],
+	['jardim-fortaleza', 'Jardim Fortaleza'],
+	['jardim-itaim', 'Jardim Itaim'],
+	['jardim-paraventi', 'Jardim Paraventi'],
+	['jardim-presidente-dutra', 'Jardim Presidente Dutra'],
+	['jardim-sao-joao', 'Jardim São João'],
+	['jardim-vila-galvao', 'Jardim Vila Galvão'],
+	['lavras', 'Lavras'],
+	['macedo', 'Macedo'],
+	['maia', 'Maia'],
+	['mato-das-cobras', 'Mato das Cobras'],
+	['monte-carmelo', 'Monte Carmelo'],
+	['morro-grande', 'Morro Grande'],
+	['morros', 'Morros'],
+	['paraventi', 'Paraventi'],
+	['parque-cecap', 'Parque CECAP'],
+	['picanco', 'Picanço'],
+	['pimentas', 'Pimentas'],
+	['ponte-grande', 'Ponte Grande'],
+	['porto-da-igreja', 'Porto da Igreja'],
+	['presidente-dutra', 'Presidente Dutra'],
+	['sadokim', 'Sadokim'],
+	['sao-joao', 'São João'],
+	['sao-roque', 'São Roque'],
+	['taboao', 'Taboão'],
+	['tanque-grande', 'Tanque Grande'],
+	['torres-tibagy', 'Torres Tibagy'],
+	['tranquilidade', 'Tranquilidade'],
+	['varzea-do-palacio', 'Várzea do Palácio'],
+	['vila-augusta', 'Vila Augusta'],
+	['vila-barros', 'Vila Barros'],
+	['vila-fatima', 'Vila Fátima'],
+	['vila-galvao', 'Vila Galvão'],
+	['vila-rio', 'Vila Rio'],
+	['vila-rio-de-janeiro', 'Vila Rio de Janeiro'],
+] as const;
 ---
 
 <Layout 
@@ -224,30 +281,15 @@ const servicosDestaque = todosServicos.slice(0, 9);
 
 				<nav aria-label="Bairros atendidos" class="max-h-[315px] overflow-y-auto pr-3 pb-2">
 					<div class="grid grid-cols-1 gap-4">
-						<a href="/bairros/centro" class="w-full rounded-2xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between gap-4 hover:border-green-700 hover:bg-green-50 transition-colors">
-							<div><span class="block text-sm font-bold uppercase tracking-wider text-green-700 mb-2">Guarulhos</span><span class="text-xl font-black text-gray-900">Centro</span></div>
-							<span class="shrink-0 text-sm font-black text-green-700">Saiba mais →</span>
-						</a>
-						<a href="/bairros/cumbica" class="w-full rounded-2xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between gap-4 hover:border-green-700 hover:bg-green-50 transition-colors">
-							<div><span class="block text-sm font-bold uppercase tracking-wider text-green-700 mb-2">Guarulhos</span><span class="text-xl font-black text-gray-900">Cumbica</span></div>
-							<span class="shrink-0 text-sm font-black text-green-700">Saiba mais →</span>
-						</a>
-						<a href="/bairros/bonsucesso" class="w-full rounded-2xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between gap-4 hover:border-green-700 hover:bg-green-50 transition-colors">
-							<div><span class="block text-sm font-bold uppercase tracking-wider text-green-700 mb-2">Guarulhos</span><span class="text-xl font-black text-gray-900">Bonsucesso</span></div>
-							<span class="shrink-0 text-sm font-black text-green-700">Saiba mais →</span>
-						</a>
-						<a href="/bairros/pimentas" class="w-full rounded-2xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between gap-4 hover:border-green-700 hover:bg-green-50 transition-colors">
-							<div><span class="block text-sm font-bold uppercase tracking-wider text-green-700 mb-2">Guarulhos</span><span class="text-xl font-black text-gray-900">Pimentas</span></div>
-							<span class="shrink-0 text-sm font-black text-green-700">Saiba mais →</span>
-						</a>
-						<a href="/bairros/vila-galvao" class="w-full rounded-2xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between gap-4 hover:border-green-700 hover:bg-green-50 transition-colors">
-							<div><span class="block text-sm font-bold uppercase tracking-wider text-green-700 mb-2">Guarulhos</span><span class="text-xl font-black text-gray-900">Vila Galvão</span></div>
-							<span class="shrink-0 text-sm font-black text-green-700">Saiba mais →</span>
-						</a>
-						<a href="/bairros/bom-clima" class="w-full rounded-2xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between gap-4 hover:border-green-700 hover:bg-green-50 transition-colors">
-							<div><span class="block text-sm font-bold uppercase tracking-wider text-green-700 mb-2">Guarulhos</span><span class="text-xl font-black text-gray-900">Bom Clima</span></div>
-							<span class="shrink-0 text-sm font-black text-green-700">Saiba mais →</span>
-						</a>
+						{bairrosAtendidos.map(([slug, nome]) => (
+							<a href={`/bairros/${slug}`} class="w-full rounded-2xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between gap-4 hover:border-green-700 hover:bg-green-50 transition-colors">
+								<div>
+									<span class="block text-sm font-bold uppercase tracking-wider text-green-700 mb-2">Guarulhos</span>
+									<span class="text-xl font-black text-gray-900">{nome}</span>
+								</div>
+								<span class="shrink-0 text-sm font-black text-green-700">Saiba mais →</span>
+							</a>
+						))}
 					</div>
 				</nav>
 
