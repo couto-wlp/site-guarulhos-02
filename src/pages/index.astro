@@ -63,7 +63,7 @@ const servicosDestaque = todosServicos.slice(0, 9);
 			<p class="text-gray-600 text-base">Soluções na medida certa para o volume do seu entulho.</p>
 		</div>
 		
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
 			{servicosDestaque.length > 0 ? servicosDestaque.map(servico => (
 				<a href={`/servicos/${servico.id}`} class="block bg-white p-6 md:p-8 rounded-3xl border-2 border-gray-100 hover:border-primary transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 group">
 					<div class="aspect-[4/3] mb-6 flex items-center justify-center overflow-hidden rounded-2xl bg-white">
