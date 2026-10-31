@@ -1,9 +1,9 @@
 ---
-title: "Descarte Correto de Entulhos na Obra: O Guia Definitivo"
+title: "Como Fazer o Descarte de Entulho da Obra: Guia Completo"
 description: "Aprenda como fazer o descarte correto de entulhos na obra, separar os resíduos, evitar multas e garantir uma destinação segura e legalizada."
 ---
 
-## Descarte Correto de Entulhos na Obra: O Guia Definitivo
+## Como Fazer o Descarte de Entulho da Obra: Guia Completo
 
 ![Descarte correto de entulhos na obra](/cacamba-.webp)
 
