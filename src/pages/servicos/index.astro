@@ -4,36 +4,76 @@ import Layout from '../../layouts/Layout.astro';
 import { SITE_CONFIG } from '../../data/config';
 
 const servicos = await getCollection('servicos');
+const ordemSolucoes = [
+    'cacamba-para-reformas-residenciais',
+    'cacamba-para-condominios',
+    'cacamba-para-construtoras',
+    'cacamba-para-empresas',
+    'cacamba-para-demolicoes',
+    'troca-programada-de-cacambas',
+];
+const ordemCapacidades = [
+    'cacamba-3m3', 'cacamba-4m3', 'cacamba-5m3', 'cacamba-6m3',
+    'cacamba-7m3', 'cacamba-8m3', 'cacamba-9m3', 'cacamba-roll-on',
+];
+const ordenar = (ordem: string[]) => ordem
+    .map(id => servicos.find(servico => servico.id === id))
+    .filter((servico): servico is NonNullable<typeof servico> => Boolean(servico));
+const solucoes = ordenar(ordemSolucoes);
+const capacidades = ordenar(ordemCapacidades);
 ---
-<Layout title="Serviços | DiskCaçamba Guarulhos" description="Serviços de aluguel de caçambas em Guarulhos. Modelos perfeitos para o descarte legal de entulho da sua reforma e obras.">
+<Layout title="Soluções e Serviços de Caçambas em Guarulhos | DiskCaçamba" description="Serviços de caçambas para reformas, condomínios, construtoras, empresas e demolições em Guarulhos, com diferentes capacidades e atendimento planejado.">
     <section class="max-w-6xl mx-auto w-full">
-        <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-16 tracking-tighter text-center leading-tight">Nossos <span class="text-green-700">Serviços</span></h1>
+        <div class="text-center max-w-4xl mx-auto mb-16">
+            <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-5 tracking-tighter leading-tight">Soluções e Serviços de <span class="text-green-700">Caçambas em Guarulhos</span></h1>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">Escolha o atendimento conforme o tipo de obra ou consulte as capacidades disponíveis para definir a caçamba adequada.</p>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
-            {servicos.map(servico => (
-                <a href={`/servicos/${servico.id}`} class="block bg-white p-6 md:p-8 rounded-3xl border-2 border-gray-100 hover:border-primary transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 group">
-                    <div class="aspect-[4/3] mb-6 flex items-center justify-center overflow-hidden rounded-2xl bg-white">
-                        <img 
-                            src={servico.data.image || "/cacamba-verde.webp"} 
-                            alt={servico.data.title} 
-                            width="400" 
-                            height="300" 
-                            loading="lazy" 
-                            decoding="async" 
-                            class="w-full h-full object-cover object-bottom mix-blend-multiply scale-100 group-hover:scale-105 transition-transform duration-500" 
-                        />
-                    </div>
-                    <h2 class="text-xl md:text-2xl font-black text-gray-900 mb-4 group-hover:text-primary transition-colors tracking-tighter">{servico.data.title}</h2>
-                    <p class="text-gray-600 text-base leading-relaxed mb-4">{servico.data.description}</p>
-                    <span class="text-green-700 font-bold group-hover:text-primary transition-colors flex items-center gap-2">
-                        Saiba mais
+        <section aria-labelledby="servicos-por-obra">
+            <div class="text-center mb-10">
+                <h2 id="servicos-por-obra" class="text-3xl md:text-[42px] font-black text-gray-900 mb-4 tracking-tighter">Serviços por <span class="text-green-700">tipo de obra</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Atendimento especializado para diferentes rotinas, acessos, volumes e formas de geração de resíduos.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                {solucoes.map((servico, index) => (
+                    <a href={`/servicos/${servico.id}`} class="flex flex-col bg-white p-7 md:p-8 rounded-3xl border-2 border-gray-100 hover:border-green-600 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-900/10 group">
+                        <div class="w-14 h-14 rounded-2xl bg-green-50 text-green-700 flex items-center justify-center mb-6 group-hover:bg-green-700 group-hover:text-white transition-colors">
+                            <span class="text-lg font-black">{String(index + 1).padStart(2, '0')}</span>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-black text-gray-900 mb-4 group-hover:text-green-700 transition-colors tracking-tighter">{servico.data.title}</h3>
+                        <p class="text-gray-600 text-base leading-relaxed mb-6 flex-grow">{servico.data.description}</p>
+                        <span class="text-green-700 font-black flex items-center gap-2">
+                            Ver solução
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                        </span>
+                    </a>
+                ))}
+            </div>
+        </section>
+
+        <section aria-labelledby="capacidades-disponiveis" class="mt-24 pt-20 border-t border-gray-100">
+            <div class="text-center mb-10">
+                <h2 id="capacidades-disponiveis" class="text-3xl md:text-[42px] font-black text-gray-900 mb-4 tracking-tighter">Caçambas por <span class="text-green-700">capacidade</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Consulte os tamanhos disponíveis e veja qual capacidade pode atender melhor ao volume e ao tipo de material da obra.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+                {capacidades.map(servico => (
+                    <a href={`/servicos/${servico.id}`} class="flex flex-col bg-white p-6 rounded-3xl border-2 border-gray-100 hover:border-green-600 transition-all hover:-translate-y-2 hover:shadow-xl group">
+                        <div class="aspect-[4/3] mb-5 flex items-center justify-center overflow-hidden rounded-2xl bg-white">
+                            <img src={servico.data.image || "/cacamba-verde.webp"} alt={servico.data.title} width="400" height="300" loading="lazy" decoding="async" class="w-full h-full object-cover object-bottom mix-blend-multiply group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-green-700 transition-colors tracking-tighter">{servico.data.title}</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">{servico.data.description}</p>
+                        <span class="text-green-700 font-black flex items-center gap-2">
+                            Ver capacidade
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                         </svg>
-                    </span>
-                </a>
-            ))}
-        </div>
+                        </span>
+                    </a>
+                ))}
+            </div>
+        </section>
 
         <!-- CTA Action Section -->
         <section class="text-center max-w-4xl mx-auto mt-24 mb-8">
