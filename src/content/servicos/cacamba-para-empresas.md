@@ -3,18 +3,18 @@ title: "Caçamba para Empresas e Galpões"
 description: "Aluguel de caçambas para reformas e manutenções em empresas, comércios, indústrias e galpões logísticos em Guarulhos, sem interromper as operações."
 image: "/cacamba-verde.webp"
 ---
-# Caçamba para Empresas e Galpões em Guarulhos
+## Caçamba para Empresas e Galpões em Guarulhos
 
-Locação para reformas, ampliações e manutenções prediais em lojas comerciais, centros logísticos, galpões industriais e sedes corporativas. Nosso planejamento logístico é desenhado para não interromper a operação, fluxo de clientes ou movimentação de cargas da sua empresa em Guarulhos e região.
+Locação para reformas, ampliações e manutenções prediais em lojas, centros logísticos, galpões e sedes corporativas. O planejamento busca reduzir interferências na circulação de clientes, fornecedores e cargas durante o atendimento.
 
 ## Capacidades Mais Indicadas para Empresas
 
-- **Caçambas de 7 e 8 m³:** Dimensionadas para reformas de lojas em shopping ou ruas comerciais, descarte de forros acústicos, gesso, carpetes e instalações elétricas/hidráulicas.
-- **Caçambas de 9 e 10 m³:** Ideais para galpões logísticos, expansões fabris, manutenções industriais e descartes de embalagens pesadas ou sobras construtivas.
-- **Contêineres Roll-on (sob consulta):** Para destinação de grandes volumes industriais não perigosos (Classe II-A e II-B).
+- **Caçambas de 7 e 8 m³:** Indicadas para reformas comerciais e resíduos permitidos de alvenaria e revestimentos.
+- **Caçambas de 9 e 10 m³:** Opções para galpões e obras com maior volume, respeitando o peso e a classificação dos materiais.
+- **Outras capacidades sob consulta:** A aceitação depende do tipo de resíduo, da disponibilidade e do sistema de transporte adequado.
 
 ## Diferenciais para o Setor Corporativo
 
-- **Horários Noturnos e Fins de Semana:** Posicionamos e retiramos caçambas fora do expediente para não atrapalhar o atendimento ao público e as docas.
-- **Atendimento com Nota Fiscal e CTR:** Emissão completa de documentação fiscal e ambiental para seu departamento financeiro e de sustentabilidade.
-- **Segurança Operacional:** Equipamentos revisados, com pintura refletiva e sinalização conforme os requisitos de segurança do trabalho (SST).
+- **Horários Planejados:** Entregas e retiradas podem ser combinadas conforme a disponibilidade operacional e as regras do local.
+- **Documentação Sob Consulta:** Nota fiscal, CTR e outros comprovantes devem ser confirmados durante a contratação.
+- **Segurança Operacional:** O acesso e o posicionamento são planejados conforme as condições informadas pela empresa.

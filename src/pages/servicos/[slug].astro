@@ -94,13 +94,145 @@ if (servico.id === "cacamba-5m3") {
   specCarga = "Reforçada p/ Carga Pesada";
   specAdicional = "Concreto e Alvenaria";
 } else if (servico.id === "troca-programada-de-cacambas") {
-  specAltura = "Sob Medida";
-  specLargura = "Sob Medida";
-  specComprimento = "Sob Medida";
+  specAltura = "Conforme capacidade";
+  specLargura = "Conforme capacidade";
+  specComprimento = "Conforme capacidade";
   specCapacidade = "8, 9, 10, 11 e 12 m³";
-  specCarga = "Logística Contínua";
-  specAdicional = "Substituição Programada";
+  specCarga = "Conforme o material";
+  specAdicional = "Troca programada";
 }
+
+const servicePages = new Set([
+  "cacamba-para-reformas-residenciais",
+  "cacamba-para-condominios",
+  "cacamba-para-construtoras",
+  "cacamba-para-empresas",
+  "cacamba-para-demolicoes",
+  "troca-programada-de-cacambas",
+]);
+
+const isServicePage = servicePages.has(servico.id);
+
+const specTitles: Record<string, string> = {
+  "cacamba-para-reformas-residenciais": "Capacidades para Reformas Residenciais",
+  "cacamba-para-condominios": "Soluções para Obras em Condomínios",
+  "cacamba-para-construtoras": "Capacidades e Logística para Canteiros",
+  "cacamba-para-empresas": "Capacidades para Empresas e Galpões",
+  "cacamba-para-demolicoes": "Capacidades e Limites de Carga",
+  "troca-programada-de-cacambas": "Condições da Troca Programada",
+};
+
+const benefitSets: Record<string, Array<{ title: string; text: string }>> = {
+  "cacamba-para-reformas-residenciais": [
+    { title: "Formato Compacto", text: "Capacidades adequadas a pequenas e médias reformas residenciais." },
+    { title: "Escolha Orientada", text: "A indicação considera o volume, o peso e o tipo de material." },
+    { title: "Obra Organizada", text: "O entulho permanece concentrado em um ponto definido." },
+    { title: "Troca Sob Consulta", text: "Uma substituição pode ser programada conforme a necessidade e a disponibilidade." },
+  ],
+  "cacamba-para-condominios": [
+    { title: "Agendamento", text: "Entrega e retirada combinadas com o responsável pelo condomínio." },
+    { title: "Avaliação de Acesso", text: "Planejamento conforme portaria, circulação interna e área autorizada." },
+    { title: "Comunicação", text: "Orientações claras para síndicos, administradoras e responsáveis pela obra." },
+    { title: "Posicionamento Planejado", text: "Escolha do local conforme as condições informadas pela administração." },
+  ],
+  "cacamba-para-construtoras": [
+    { title: "Planejamento Logístico", text: "Trocas organizadas de acordo com o ritmo e o acesso do canteiro." },
+    { title: "Atendimento Recorrente", text: "Frequência definida conforme a produção de resíduos da obra." },
+    { title: "Controle de Solicitações", text: "Programação centralizada para facilitar a rotina da equipe responsável." },
+    { title: "Documentação Sob Consulta", text: "Documentos disponíveis são confirmados conforme o serviço contratado." },
+  ],
+  "cacamba-para-empresas": [
+    { title: "Operação Planejada", text: "Atendimento organizado para reduzir interferências na rotina da empresa." },
+    { title: "Avaliação dos Resíduos", text: "Aceitação definida conforme classificação, volume e peso dos materiais." },
+    { title: "Agendamento", text: "Períodos de entrega e retirada combinados conforme disponibilidade." },
+    { title: "Atendimento Empresarial", text: "Condições comerciais e documentos confirmados durante a contratação." },
+  ],
+  "cacamba-para-demolicoes": [
+    { title: "Controle de Peso", text: "A capacidade é definida principalmente pela densidade dos materiais." },
+    { title: "Carregamento Seguro", text: "O resíduo deve permanecer dentro da borda e dos limites permitidos." },
+    { title: "Trocas Planejadas", text: "Substituições podem acompanhar as etapas da demolição." },
+    { title: "Triagem de Materiais", text: "A equipe orienta sobre resíduos aceitos e materiais que exigem coleta específica." },
+  ],
+  "troca-programada-de-cacambas": [
+    { title: "Cronograma Definido", text: "Períodos de troca combinados conforme a geração de resíduos." },
+    { title: "Menos Acúmulo", text: "A retirada recorrente ajuda a manter as áreas de trabalho organizadas." },
+    { title: "Controle Operacional", text: "Solicitações e frequências são acompanhadas conforme o serviço contratado." },
+    { title: "Flexibilidade", text: "O planejamento pode ser revisto conforme disponibilidade e evolução da obra." },
+  ],
+};
+
+const faqSets: Record<string, Array<{ question: string; answer: string }>> = {
+  "cacamba-para-reformas-residenciais": [
+    { question: "Qual capacidade escolher para uma pequena reforma?", answer: "As opções de 3, 4 e 5 m³ atendem diferentes volumes. A indicação depende dos ambientes reformados, do peso e do tipo de material." },
+    { question: "A caçamba cabe em uma garagem?", answer: "É necessário verificar medidas, acesso, altura livre e espaço de manobra antes da entrega. Envie fotos e dimensões pelo WhatsApp para avaliação." },
+    { question: "Posso descartar pisos e azulejos?", answer: "Pisos, azulejos, argamassa e alvenaria geralmente podem ser aceitos, desde que respeitados os limites e não sejam misturados com materiais proibidos." },
+    { question: "É possível trocar a caçamba durante a reforma?", answer: "Sim, uma substituição pode ser programada conforme a produção de resíduos e a disponibilidade operacional." },
+  ],
+  "cacamba-para-condominios": [
+    { question: "O condomínio precisa autorizar a colocação?", answer: "A administração deve confirmar o local, o horário, o acesso e as regras internas antes da entrega." },
+    { question: "A caçamba pode ficar dentro da garagem?", answer: "Depende da altura livre, resistência do piso, raio de manobra e autorização do condomínio. O acesso precisa ser avaliado previamente." },
+    { question: "Qual capacidade atende uma reforma de apartamento?", answer: "As opções de 4, 5 e 6 m³ podem atender, conforme o tamanho da reforma e os materiais descartados." },
+    { question: "A entrega pode ser combinada com a portaria?", answer: "Sim. O responsável deve informar os procedimentos de entrada e acompanhar o agendamento com a equipe." },
+  ],
+  "cacamba-para-construtoras": [
+    { question: "É possível programar várias trocas?", answer: "Sim. A frequência pode ser planejada conforme o cronograma da obra, a geração de resíduos e a disponibilidade operacional." },
+    { question: "Como calcular a quantidade necessária?", answer: "A estimativa considera etapas da obra, volume, peso, tipos de resíduos, acesso e frequência de retirada." },
+    { question: "Existe faturamento para pessoa jurídica?", answer: "As condições comerciais e de faturamento devem ser confirmadas com a equipe no momento da contratação." },
+    { question: "Quais documentos podem acompanhar o serviço?", answer: "A disponibilidade de nota fiscal, CTR e outros comprovantes depende do serviço contratado e deve ser confirmada previamente." },
+  ],
+  "cacamba-para-empresas": [
+    { question: "Quais resíduos empresariais podem ser coletados?", answer: "A aceitação depende da classificação do resíduo. Materiais perigosos, químicos ou incompatíveis exigem destinação específica." },
+    { question: "Vocês atendem galpões logísticos?", answer: "O atendimento pode ser planejado após avaliação do acesso, do local de posicionamento e dos resíduos produzidos." },
+    { question: "É possível agendar fora do horário comercial?", answer: "Períodos especiais podem ser avaliados conforme as regras do local e a disponibilidade operacional." },
+    { question: "Há documentação para empresas?", answer: "Documentos fiscais e ambientais disponíveis devem ser confirmados durante a contratação." },
+  ],
+  "cacamba-para-demolicoes": [
+    { question: "Como escolher a capacidade para uma demolição?", answer: "A escolha considera principalmente o peso e a densidade. Materiais pesados podem atingir o limite antes de preencher todo o volume." },
+    { question: "O entulho pode ultrapassar a borda?", answer: "Não. Os resíduos devem permanecer dentro da caçamba para permitir transporte seguro." },
+    { question: "Posso descartar ferragens junto com o concreto?", answer: "A presença de ferragens e concreto armado deve ser informada antes da contratação para confirmar as condições de aceitação." },
+    { question: "Telhas de fibrocimento podem ser descartadas?", answer: "Esse material exige avaliação específica e não deve ser colocado na caçamba sem autorização prévia da equipe." },
+  ],
+  "troca-programada-de-cacambas": [
+    { question: "Como funciona a troca programada?", answer: "A frequência e os períodos são definidos previamente conforme a produção de resíduos, o acesso e a disponibilidade operacional." },
+    { question: "É necessário fazer contrato?", answer: "As condições dependem da frequência e da duração do atendimento. A equipe informa a modalidade adequada durante o orçamento." },
+    { question: "A troca acontece sempre no mesmo horário?", answer: "O período é programado, mas pode variar conforme trânsito, acesso, operação e disponibilidade." },
+    { question: "Posso alterar o cronograma?", answer: "Alterações podem ser solicitadas e serão confirmadas conforme antecedência e disponibilidade operacional." },
+  ],
+};
+
+const legacyBenefits = [
+  { title: "Praticidade", text: "Equipamento escolhido de acordo com o espaço e a necessidade informada." },
+  { title: "Agilidade", text: "Logística planejada para entrega e retirada." },
+  { title: "Conformidade", text: "Atendimento conforme as condições aplicáveis ao serviço contratado." },
+  { title: "Destinação", text: "Encaminhamento dos resíduos aceitos conforme sua classificação." },
+];
+
+const legacyFaqs = [
+  { question: "Como escolho o tamanho da caçamba?", answer: "A escolha considera volume, peso, tipo de resíduo e espaço disponível. Envie as informações da obra para receber orientação." },
+  { question: "O que não posso descartar na caçamba?", answer: "Lixo doméstico, produtos químicos, líquidos, pneus, materiais perigosos e outros resíduos incompatíveis não devem ser misturados ao entulho." },
+  { question: "Quanto tempo a caçamba pode permanecer no local?", answer: "O período depende do contrato e das regras aplicáveis ao local de posicionamento. Confirme as condições durante o orçamento." },
+  { question: "É necessário autorizar a colocação em via pública?", answer: "As exigências variam conforme o local. A colocação deve respeitar sinalização, acessos, vagas restritas e orientações municipais." },
+];
+
+const displayedBenefits = benefitSets[servico.id] ?? legacyBenefits;
+const displayedFaqs = faqSets[servico.id] ?? legacyFaqs;
+const displayedSpecs = isServicePage
+  ? [
+      { label: "Capacidades", value: specCapacidade },
+      { label: "Indicação", value: specAdicional },
+      { label: "Carga", value: "Conforme o material" },
+      { label: "Planejamento", value: "Conforme a necessidade" },
+      { label: "Resíduos", value: "Sujeitos à avaliação" },
+      { label: "Disponibilidade", value: "Sob consulta" },
+    ]
+  : [
+      { label: "Altura", value: specAltura },
+      { label: "Largura", value: specLargura },
+      { label: "Comprimento", value: specComprimento },
+      { label: "Capacidade", value: specCapacidade },
+      { label: "Carga Máxima", value: specCarga },
+      { label: "Adicional", value: specAdicional },
+    ];
 ---
 <Layout title={`${servico.data.title} | DiskCaçamba`} description={servico.data.description}>
     <!-- Hero do Serviço -->
@@ -108,7 +240,7 @@ if (servico.id === "cacamba-5m3") {
         <span class="inline-block py-1.5 px-4 rounded-full bg-green-700 text-white font-black text-xs mb-6 uppercase tracking-widest shadow-sm">
             Serviços Especializados
         </span>
-        <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-16 tracking-tighter leading-tight">{servico.data.title}</h1>
+        <h1 class="text-4xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">{servico.data.title}</h1>
         <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium mb-10">
             {servico.data.description}
         </p>
@@ -136,32 +268,14 @@ if (servico.id === "cacamba-5m3") {
             
             <!-- Grid de Especificações -->
             <div id="especificacoes" class="scroll-mt-24">
-                <h2 class="text-2xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter">Especificações Técnicas</h2>
+                <h2 class="text-2xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter">{specTitles[servico.id] ?? "Especificações Técnicas"}</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-6 bg-white border border-gray-100 p-8 rounded-3xl shadow-sm">
-                    <div>
-                        <div class="text-sm text-gray-500 font-medium mb-1">Altura</div>
-                        <div class="text-xl font-black text-gray-900">{specAltura}</div>
-                    </div>
-                    <div>
-                        <div class="text-sm text-gray-500 font-medium mb-1">Largura</div>
-                        <div class="text-xl font-black text-gray-900">{specLargura}</div>
-                    </div>
-                    <div>
-                        <div class="text-sm text-gray-500 font-medium mb-1">Comprimento</div>
-                        <div class="text-xl font-black text-gray-900">{specComprimento}</div>
-                    </div>
-                    <div>
-                        <div class="text-sm text-gray-500 font-medium mb-1">Capacidade</div>
-                        <div class="text-xl font-black text-gray-900">{specCapacidade}</div>
-                    </div>
-                    <div>
-                        <div class="text-sm text-gray-500 font-medium mb-1">Carga Máxima</div>
-                        <div class="text-xl font-black text-gray-900">{specCarga}</div>
-                    </div>
-                    <div>
-                        <div class="text-sm text-gray-500 font-medium mb-1">Adicional</div>
-                        <div class="text-xl font-black text-gray-900">{specAdicional}</div>
-                    </div>
+                    {displayedSpecs.map((spec) => (
+                        <div>
+                            <div class="text-sm text-gray-500 font-medium mb-1">{spec.label}</div>
+                            <div class="text-xl font-black text-gray-900">{spec.value}</div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
@@ -179,34 +293,15 @@ if (servico.id === "cacamba-5m3") {
             <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 md:p-10">
                 <h3 class="text-2xl font-black text-gray-900 mb-8 tracking-tighter">Benefícios e Aplicações</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="flex gap-4">
-                        <div class="w-6 h-6 rounded bg-yellow-100 text-yellow-600 flex items-center justify-center shrink-0">✓</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-1">Praticidade</h4>
-                            <p class="text-sm text-gray-600 leading-relaxed">Tamanho perfeito para adequar em garagens e ruas estreitas.</p>
+                    {displayedBenefits.map((benefit) => (
+                        <div class="flex gap-4">
+                            <div class="w-6 h-6 rounded bg-yellow-100 text-yellow-600 flex items-center justify-center shrink-0">✓</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">{benefit.title}</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">{benefit.text}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-6 h-6 rounded bg-yellow-100 text-yellow-600 flex items-center justify-center shrink-0">✓</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-1">Agilidade</h4>
-                            <p class="text-sm text-gray-600 leading-relaxed">Logística inteligente para entrega e retirada de forma rápida.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-6 h-6 rounded bg-yellow-100 text-yellow-600 flex items-center justify-center shrink-0">✓</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-1">Conformidade</h4>
-                            <p class="text-sm text-gray-600 leading-relaxed">Nossa empresa obedece as normas da SEMA e prefeitura local.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-6 h-6 rounded bg-yellow-100 text-yellow-600 flex items-center justify-center shrink-0">✓</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-1">Sustentabilidade</h4>
-                            <p class="text-sm text-gray-600 leading-relaxed">Descarte ecológico em usinas e aterros legalizados.</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 
@@ -214,6 +309,17 @@ if (servico.id === "cacamba-5m3") {
             <div>
                 <h3 class="text-2xl font-black text-gray-900 mb-6 tracking-tighter">Perguntas Frequentes</h3>
                 <div class="flex flex-col gap-3">
+                    {isServicePage ? displayedFaqs.map((faq) => (
+                        <details class="group bg-white border border-gray-200 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
+                            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-gray-900 font-bold">
+                                {faq.question}
+                                <span class="shrink-0 rounded-full bg-gray-50 p-1.5 text-gray-900 sm:p-3 group-open:-rotate-180 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                                </span>
+                            </summary>
+                            <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">{faq.answer}</div>
+                        </details>
+                    )) : <>
                     <details class="group bg-white border border-gray-200 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
                         <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-gray-900 font-bold">
                             Como escolho o tamanho da caçamba de entulho?
@@ -258,6 +364,7 @@ if (servico.id === "cacamba-5m3") {
                             Nós somos uma empresa regularizada e cuidamos de toda a documentação, porém é necessário respeitar as faixas de pedestre, guias rebaixadas e vagas de estacionamento restrito.
                         </div>
                     </details>
+                    </>}
                 </div>
             </div>
 
@@ -267,13 +374,13 @@ if (servico.id === "cacamba-5m3") {
         <div class="w-full lg:w-1/3">
             <div class="sticky top-10 bg-green-700 rounded-[2rem] p-8 md:p-10 shadow-2xl shadow-green-700/30 flex flex-col items-center text-center">
                 <div class="text-xs font-black uppercase tracking-widest text-white mb-3 opacity-90">Alugue agora mesmo com facilidade!</div>
-                <h3 class="text-3xl font-black text-white mb-8 tracking-tighter leading-tight">Interessado neste modelo?</h3>
+                <h3 class="text-3xl font-black text-white mb-8 tracking-tighter leading-tight">{isServicePage ? "Precisa de uma caçamba para este serviço?" : "Interessado neste modelo?"}</h3>
                 
                 <a href="https://wa.me/5511943758808" target="_blank" class="w-full flex justify-center items-center gap-3 px-6 py-4 bg-[#1c2331] text-white text-base font-black rounded-xl transition-all hover:scale-105 active:scale-95 mb-4 shadow-xl">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
                     </svg>
-                    Pedir via WhatsApp
+                    {isServicePage ? "Solicitar orientação no WhatsApp" : "Pedir via WhatsApp"}
                 </a>
                 <a href="tel:+5511943758808" class="w-full flex justify-center items-center gap-3 px-6 py-4 bg-gray-100 text-gray-900 text-base font-black rounded-xl transition-all hover:bg-gray-200 hover:scale-105 active:scale-95 mb-8">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">

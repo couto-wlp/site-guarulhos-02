@@ -3,19 +3,19 @@ title: "Caçamba para Condomínios"
 description: "Locação de caçambas para condomínios em Guarulhos. Atendimento planejado para apartamentos, fachadas, garagens e áreas comuns, respeitando as normas internas."
 image: "/cacamba-verde.webp"
 ---
-# Caçamba para Condomínios em Guarulhos
+## Caçamba para Condomínios em Guarulhos
 
-Atendimento planejado para obras em apartamentos, reformas de fachadas, impermeabilização de garagens, guaritas e manutenção de áreas comuns. Atuamos com respeito rigoroso aos horários, acessos e regras operacionais definidos pela administração e sindicância de condomínios residenciais e comerciais em Guarulhos.
+Atendimento planejado para obras em apartamentos, fachadas, garagens, guaritas e áreas comuns. A entrega e a retirada são combinadas conforme os acessos, horários e regras informados pela administração do condomínio.
 
 ## Capacidades Mais Utilizadas em Condomínios
 
-- **Caçamba de 4 m³:** Muito utilizada em reformas internas de apartamentos, facilitando o transporte do entulho pelos elevadores de serviço ou áreas de descarga rápida.
+- **Caçamba de 4 m³:** Indicada para reformas internas de apartamentos e pequenos serviços em áreas comuns.
 - **Caçamba de 5 m³:** Capacidade equilibrada para obras em áreas comuns, reformas de portaria e substituição de calçamentos externos.
 - **Caçamba de 6 m³:** Indicada para reformas de fachadas, obras estruturais ou múltiplos apartamentos em reforma simultânea.
 
 ## Cuidados Especiais para Ambientes Condominiais
 
-- **Respeito aos Horários de Ruído e Carga:** Entregas e retiradas estritamente alinhadas com as normas de regimento interno do condomínio.
-- **Proteção do Pavimento e Calçadas:** Manobras milimétricas com caminhões especializados para não trincar pisos intertravados, guias ou calçamentos.
-- **Descarte 100% Legalizado (CTR):** Documentação completa para prestar contas ao síndico e aos condôminos, sem risco de autuações pela Prefeitura de Guarulhos.
-- **Posicionamento Seguro:** Estacionamento rente à guia ou em baias designadas pela administração, mantendo o trânsito interno totalmente livre.
+- **Agendamento com a Administração:** A programação considera as regras e os horários informados pelo síndico ou responsável.
+- **Avaliação do Acesso:** O local de posicionamento deve ser confirmado antes da entrega para reduzir riscos durante a manobra.
+- **Documentação Sob Consulta:** Comprovantes e documentos disponíveis devem ser confirmados no momento da contratação.
+- **Posicionamento Planejado:** A caçamba é colocada em área autorizada, observando a circulação interna e as condições do local.
