@@ -58,6 +58,48 @@ if (servico.id === "cacamba-5m3") {
   specCapacidade = "15m³ a 30m³";
   specCarga = "12,0 Toneladas";
   specAdicional = "Para Demolição Total";
+} else if (servico.id === "cacamba-para-reformas-residenciais") {
+  specAltura = "1,10m a 1,40m";
+  specLargura = "1,30m a 1,60m";
+  specComprimento = "2,30m a 2,80m";
+  specCapacidade = "3, 4 e 5 m³";
+  specCarga = "Até 6,0 Toneladas";
+  specAdicional = "Reforma Residencial";
+} else if (servico.id === "cacamba-para-condominios") {
+  specAltura = "1,20m a 1,50m";
+  specLargura = "1,40m a 1,70m";
+  specComprimento = "2,50m a 3,00m";
+  specCapacidade = "4, 5 e 6 m³";
+  specCarga = "Até 7,5 Toneladas";
+  specAdicional = "Uso Condominial";
+} else if (servico.id === "cacamba-para-construtoras") {
+  specAltura = "1,50m a 1,70m";
+  specLargura = "1,70m a 1,90m";
+  specComprimento = "3,00m a 3,40m";
+  specCapacidade = "6, 7, 8 e 9 m³";
+  specCarga = "Até 9,0 Toneladas";
+  specAdicional = "Canteiro de Obras";
+} else if (servico.id === "cacamba-para-empresas") {
+  specAltura = "1,60m a 1,80m";
+  specLargura = "1,80m a 2,00m";
+  specComprimento = "3,20m a 4,00m";
+  specCapacidade = "7, 8, 9 e 10 m³";
+  specCarga = "Até 10,0 Toneladas";
+  specAdicional = "Lojas e Galpões";
+} else if (servico.id === "cacamba-para-demolicoes") {
+  specAltura = "1,50m a 1,70m";
+  specLargura = "1,70m a 1,90m";
+  specComprimento = "3,00m a 3,40m";
+  specCapacidade = "6, 7, 8 e 9 m³";
+  specCarga = "Reforçada p/ Carga Pesada";
+  specAdicional = "Concreto e Alvenaria";
+} else if (servico.id === "troca-programada-de-cacambas") {
+  specAltura = "Sob Medida";
+  specLargura = "Sob Medida";
+  specComprimento = "Sob Medida";
+  specCapacidade = "8, 9, 10, 11 e 12 m³";
+  specCarga = "Logística Contínua";
+  specAdicional = "Substituição Programada";
 }
 ---
 <Layout title={`${servico.data.title} | DiskCaçamba`} description={servico.data.description}>
