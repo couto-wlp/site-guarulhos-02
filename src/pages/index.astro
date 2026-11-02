@@ -7,56 +7,6 @@ const ordemModelos = ['cacamba-4m3', 'cacamba-5m3', 'cacamba-6m3', 'cacamba-7m3'
 const modelosDestaque = todosServicos
 	.filter((servico) => ordemModelos.includes(servico.id))
 	.sort((a, b) => ordemModelos.indexOf(a.id) - ordemModelos.indexOf(b.id));
-const solucoesObras = [
-	{
-		titulo: "Caçamba para reformas residenciais",
-		descricao: "Solução para reformas de cozinhas, banheiros, quartos e áreas externas. Nossa equipe orienta sobre a capacidade adequada conforme o volume e o tipo de material produzido.",
-		capacidades: ["3 m³", "4 m³", "5 m³"],
-		botao: "Ver serviço",
-		link: "/servicos/cacamba-para-reformas-residenciais",
-		icone: "residencial"
-	},
-	{
-		titulo: "Caçamba para condomínios",
-		descricao: "Atendimento planejado para obras em apartamentos, fachadas, garagens e áreas comuns, respeitando os horários, acessos e regras definidos pela administração do condomínio.",
-		capacidades: ["4 m³", "5 m³", "6 m³"],
-		botao: "Ver serviço",
-		link: "/servicos/cacamba-para-condominios",
-		icone: "condominio"
-	},
-	{
-		titulo: "Caçamba para construtoras",
-		descricao: "Entrega, retirada e substituição programadas para manter o canteiro organizado. Atendemos diferentes etapas da construção conforme a geração de resíduos da obra.",
-		capacidades: ["6 m³", "7 m³", "8 m³", "9 m³"],
-		botao: "Ver serviço",
-		link: "/servicos/cacamba-para-construtoras",
-		icone: "construtora"
-	},
-	{
-		titulo: "Caçamba para empresas e galpões",
-		descricao: "Locação para reformas, ampliações e manutenções em lojas, indústrias, centros logísticos e galpões, com planejamento para não interromper a operação do estabelecimento.",
-		capacidades: ["7 m³", "8 m³", "9 m³", "10 m³"],
-		botao: "Ver serviço",
-		link: "/servicos/cacamba-para-empresas",
-		icone: "empresa"
-	},
-	{
-		titulo: "Caçamba para demolições",
-		descricao: "Coleta de concreto, tijolos, blocos, argamassa e outros resíduos permitidos. A capacidade é escolhida considerando o volume e principalmente o peso dos materiais.",
-		capacidades: ["6 m³", "7 m³", "8 m³", "9 m³"],
-		botao: "Ver serviço",
-		link: "/servicos/cacamba-para-demolicoes",
-		icone: "demolicao"
-	},
-	{
-		titulo: "Troca programada de caçambas",
-		descricao: "Serviço para obras que produzem resíduos continuamente. Organizamos entregas, retiradas e substituições para evitar acúmulo de entulho e paralisações no local.",
-		capacidades: ["8 m³", "9 m³", "10 m³", "11 m³", "12 m³"],
-		botao: "Solicitar planejamento",
-		link: "/servicos/troca-programada-de-cacambas",
-		icone: "troca"
-	}
-];
 const bairrosAtendidos = [
 	['agua-azul', 'Água Azul'],
 	['agua-chata', 'Água Chata'],
@@ -166,40 +116,7 @@ const bairrosAtendidos = [
 		</div>
 	</section>
 
-	<!-- 2. Estrutura para obras e operações -->
-	<section class="w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] px-6 py-24 bg-green-50">
-		<div class="max-w-6xl mx-auto">
-			<h2 class="text-3xl md:text-[47px] font-black text-center text-[#1c2331] mb-4 tracking-tighter">
-				Estrutura para <span class="text-green-700">obras e operações</span>
-			</h2>
-			<p class="text-gray-600 text-base leading-relaxed text-center max-w-3xl mx-auto mb-16">Organizamos a capacidade, a entrega e as retiradas conforme a rotina da obra, do condomínio ou da empresa.</p>
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-				<div class="bg-white p-10 md:p-12 rounded-[2rem] shadow-sm">
-					<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-8">
-						<svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-					</div>
-					<h3 class="text-2xl font-black text-[#1c2331] mb-4 tracking-tighter">Planejamento de Capacidade</h3>
-					<p class="text-gray-600 text-base leading-relaxed">Orientamos a escolha da caçamba conforme o tipo de resíduo, o volume estimado, o acesso ao local e a rotina da operação.</p>
-				</div>
-				<div class="bg-white p-10 md:p-12 rounded-[2rem] shadow-sm">
-					<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-8">
-						<svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.95 11.95 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-					</div>
-					<h3 class="text-2xl font-black text-[#1c2331] mb-4 tracking-tighter">Troca Programada</h3>
-					<p class="text-gray-600 text-base leading-relaxed">Planejamos entregas, retiradas e substituições para obras com geração contínua de resíduos, reduzindo acúmulos e interrupções no canteiro.</p>
-				</div>
-				<div class="bg-white p-10 md:p-12 rounded-[2rem] shadow-sm">
-					<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-8">
-						<svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-					</div>
-					<h3 class="text-2xl font-black text-[#1c2331] mb-4 tracking-tighter">Atendimento Empresarial</h3>
-					<p class="text-gray-600 text-base leading-relaxed">Atendemos empresas, galpões, condomínios e construtoras com programação alinhada aos horários, acessos e etapas de cada serviço.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- 3. Modelos de caçamba -->
+	<!-- 2. Modelos de caçamba -->
 	<section aria-labelledby="modelos-cacamba">
 		<div class="flex flex-col items-center text-center mb-12">
 			<span class="text-sm font-black uppercase tracking-widest text-green-700 mb-3">Escolha conforme a sua obra</span>
@@ -211,7 +128,7 @@ const bairrosAtendidos = [
 			</p>
 		</div>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 max-w-7xl mx-auto">
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
 			{modelosDestaque.map((servico) => (
 				<article class="bg-white border-2 border-gray-100 rounded-3xl overflow-hidden hover:border-green-600 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
 					<a href={`/servicos/${servico.id}`} class="block bg-green-50 p-5" aria-label={`Conhecer ${servico.data.title}`}>
@@ -233,104 +150,7 @@ const bairrosAtendidos = [
 		</div>
 	</section>
 
-	<!-- 4. Soluções em Caçambas para Obras e Empresas -->
-	<section id="solucoes" class="scroll-mt-20">
-		<div class="flex flex-col items-center text-center mb-12">
-			<h2 class="text-3xl md:text-[47px] font-black text-gray-900 mb-4 tracking-tighter">
-				Soluções em Caçambas para <span class="text-green-700">Obras e Empresas</span>
-			</h2>
-			<p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-				Atendimento para reformas, condomínios, construtoras e empresas em Guarulhos, com orientação para escolher a capacidade adequada e planejar cada retirada.
-			</p>
-		</div>
-		
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-			{solucoesObras.map((item) => (
-				<div class="bg-white p-7 md:p-8 rounded-3xl border-2 border-gray-100 hover:border-green-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-900/10 flex flex-col justify-between group">
-					<div>
-						<div class="w-14 h-14 rounded-2xl bg-green-50 text-green-700 flex items-center justify-center mb-6 group-hover:bg-green-700 group-hover:text-white transition-all duration-300 shadow-sm">
-							{item.icone === "residencial" && (
-								<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-								</svg>
-							)}
-							{item.icone === "condominio" && (
-								<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-								</svg>
-							)}
-							{item.icone === "construtora" && (
-								<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9h4m0 4h4m6-4h4"/>
-								</svg>
-							)}
-							{item.icone === "empresa" && (
-								<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
-								</svg>
-							)}
-							{item.icone === "demolicao" && (
-								<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
-								</svg>
-							)}
-							{item.icone === "troca" && (
-								<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-								</svg>
-							)}
-						</div>
-						<h3 class="text-xl md:text-2xl font-black text-gray-900 mb-3 group-hover:text-green-700 transition-colors tracking-tight leading-snug">
-							{item.titulo}
-						</h3>
-						<p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
-							{item.descricao}
-						</p>
-					</div>
-
-					<div>
-						<div class="pt-4 border-t border-gray-100 mb-6">
-							<span class="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2.5">
-								Capacidades relacionadas:
-							</span>
-							<div class="flex flex-wrap gap-2.5">
-								{item.capacidades.map(cap => (
-									<span class="inline-flex min-h-10 items-center justify-center px-4 py-2 rounded-xl text-sm md:text-base font-black bg-green-50/70 text-green-800 border border-green-200/60 group-hover:bg-green-100 group-hover:border-green-300 transition-colors">
-										{cap}
-									</span>
-								))}
-							</div>
-						</div>
-
-						<a 
-							href={item.link} 
-							class="inline-flex items-center justify-between w-full px-5 py-3.5 bg-gray-50 group-hover:bg-green-700 text-gray-900 group-hover:text-white font-black rounded-xl transition-all duration-300 text-sm shadow-sm group-hover:shadow-lg group-hover:shadow-green-700/30"
-						>
-							<span>{item.botao}</span>
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-							</svg>
-						</a>
-					</div>
-				</div>
-			))}
-		</div>
-
-		<div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-			<a href="/servicos" class="inline-flex px-8 py-4 bg-green-700 text-white font-black rounded-xl hover:bg-green-800 hover:scale-105 active:scale-95 transition-all shadow-lg text-center">
-				Ver Todos os Serviços
-			</a>
-			<a href="https://wa.me/5511943758808" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 border-2 border-gray-200 font-black rounded-xl hover:bg-gray-50 hover:border-green-600 hover:scale-105 active:scale-95 transition-all shadow-sm text-center gap-2">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="text-green-700" viewBox="0 0 16 16">
-					<path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-				</svg>
-				<span>Falar com Especialista</span>
-			</a>
-		</div>
-	</section>
-
-	<!-- 5. Como o orçamento é calculado -->
+	<!-- 3. Como o orçamento é calculado -->
 	<section class="w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] px-6 py-24 bg-gray-50 border-y border-gray-100" aria-labelledby="preco-cacamba">
 		<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-12 items-center">
 			<div>
@@ -452,9 +272,11 @@ const bairrosAtendidos = [
 					<p class="text-gray-600 text-base leading-relaxed max-w-3xl mx-auto">Levamos caçambas com rapidez e segurança aos principais bairros de Guarulhos, oferecendo atendimento confiável para obras, reformas e limpezas locais.</p>
 				</div>
 
-				<nav aria-label="Bairros atendidos" class="max-h-[315px] overflow-y-auto pr-3 pb-2">
-					<div class="grid grid-cols-1 gap-4">
-						{bairrosAtendidos.map(([slug, nome]) => (
+				<nav aria-label="Principais bairros atendidos">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+						{bairrosAtendidos
+							.filter(([slug]) => ['centro', 'cumbica', 'bonsucesso', 'pimentas', 'taboao', 'vila-galvao', 'presidente-dutra', 'bom-clima'].includes(slug))
+							.map(([slug, nome]) => (
 							<a href={`/bairros/${slug}`} class="w-full rounded-2xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between gap-4 hover:border-green-700 hover:bg-green-50 transition-colors">
 								<div>
 									<span class="block text-sm font-bold uppercase tracking-wider text-green-700 mb-2">Guarulhos</span>
@@ -466,9 +288,8 @@ const bairrosAtendidos = [
 					</div>
 				</nav>
 
-				<div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-3">
-					<p class="text-sm font-semibold text-gray-500">Role para baixo e veja mais bairros ↓</p>
-					<a href="/bairros" class="text-green-700 font-black hover:underline">Ver todos os bairros</a>
+				<div class="text-center mt-8">
+					<a href="/bairros" class="inline-flex px-7 py-3 bg-gray-100 text-gray-900 font-black rounded-xl hover:bg-gray-200 transition-colors">Ver todos os bairros</a>
 				</div>
 			</div>
 		</section>
@@ -517,14 +338,6 @@ const bairrosAtendidos = [
 					<details class="group bg-gray-50 border border-gray-200 rounded-2xl p-5 md:p-6">
 						<summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-black text-gray-900">Por quanto tempo posso ficar com a caçamba?<span class="text-green-700 text-2xl transition-transform group-open:rotate-45">+</span></summary>
 						<p class="mt-4 pr-8 text-gray-600 leading-relaxed">O período de permanência é combinado no orçamento. Se precisar estender o prazo ou antecipar a retirada, entre em contato para verificarmos a disponibilidade.</p>
-					</details>
-					<details class="group bg-gray-50 border border-gray-200 rounded-2xl p-5 md:p-6">
-						<summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-black text-gray-900">A caçamba pode ficar na rua?<span class="text-green-700 text-2xl transition-transform group-open:rotate-45">+</span></summary>
-						<p class="mt-4 pr-8 text-gray-600 leading-relaxed">A instalação em via pública deve respeitar as regras municipais, a sinalização e a circulação de veículos e pedestres. Nossa equipe orienta sobre o posicionamento adequado para o endereço informado.</p>
-					</details>
-					<details class="group bg-gray-50 border border-gray-200 rounded-2xl p-5 md:p-6">
-						<summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-black text-gray-900">Vocês fornecem comprovante de descarte?<span class="text-green-700 text-2xl transition-transform group-open:rotate-45">+</span></summary>
-						<p class="mt-4 pr-8 text-gray-600 leading-relaxed">A operação segue a destinação legalizada dos resíduos e pode incluir a documentação aplicável, como CTR ou MTR, conforme o tipo de serviço e de material coletado.</p>
 					</details>
 					<details class="group bg-gray-50 border border-gray-200 rounded-2xl p-5 md:p-6">
 						<summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-black text-gray-900">Como solicitar um orçamento?<span class="text-green-700 text-2xl transition-transform group-open:rotate-45">+</span></summary>
