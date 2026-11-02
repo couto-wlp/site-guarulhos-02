@@ -1,4 +1,4 @@
-const CACHE_NAME = 'diskcacamba-v1';
+const CACHE_NAME = 'aluga-cacamba-garantido-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/favicon.svg',

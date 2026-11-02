@@ -5,9 +5,15 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": SITE_CONFIG.name,
-  "image": `${SITE_CONFIG.url}/og-image.jpg`,
+  "image": `${SITE_CONFIG.url}/home_truck.webp`,
   "url": SITE_CONFIG.url,
   "telephone": SITE_CONFIG.contact.phone,
+  "email": SITE_CONFIG.contact.email,
+  "description": SITE_CONFIG.description,
+  "areaServed": {
+    "@type": "City",
+    "name": "Guarulhos"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": SITE_CONFIG.address.streetAddress,

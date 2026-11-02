@@ -5,7 +5,7 @@ description: "Aprenda como fazer o descarte correto de entulhos na obra, separar
 
 ## Como Fazer o Descarte de Entulho da Obra: Guia Completo
 
-![Descarte correto de entulhos na obra](/cacamba-.webp)
+![Descarte correto de entulhos na obra](/cacamba-entulho-guia-definitivo.webp)
 
 Seja para uma pequena reforma residencial, uma grande obra comercial ou a limpeza de um terreno, o descarte correto dos resíduos é uma das etapas mais críticas do seu projeto. Atrasos na retirada do entulho podem paralisar o trabalho dos seus pedreiros e gerar multas gravíssimas com a fiscalização municipal.
 

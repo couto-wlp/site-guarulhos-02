@@ -5,6 +5,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://www.alugacacambagarantido.com.br',
+  trailingSlash: 'never',
   output: 'static',
   server: {
     host: true,
