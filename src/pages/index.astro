@@ -3,7 +3,10 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
 const todosServicos = await getCollection('servicos');
-const servicosDestaque = todosServicos.slice(0, 9);
+const ordemModelos = ['cacamba-4m3', 'cacamba-5m3', 'cacamba-6m3', 'cacamba-7m3', 'cacamba-8m3'];
+const modelosDestaque = todosServicos
+	.filter((servico) => ordemModelos.includes(servico.id))
+	.sort((a, b) => ordemModelos.indexOf(a.id) - ordemModelos.indexOf(b.id));
 const solucoesObras = [
 	{
 		titulo: "Caçamba para reformas residenciais",
@@ -130,7 +133,7 @@ const bairrosAtendidos = [
 			</h1>
 			
 			<p class="text-base text-gray-600 mt-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-				Atendimento planejado para reformas, condomínios, construtoras, empresas e demolições, com orientação de capacidade, entrega, retirada e troca programada.
+				Alugue caçamba de entulho em Guarulhos para reformas, condomínios, construtoras, empresas e demolições. Orientamos a escolha do tamanho conforme o volume, o peso e o tipo de resíduo da obra.
 			</p>
 
 			<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5 mt-10">
@@ -193,6 +196,40 @@ const bairrosAtendidos = [
 					<p class="text-gray-600 text-base leading-relaxed">Atendemos empresas, galpões, condomínios e construtoras com programação alinhada aos horários, acessos e etapas de cada serviço.</p>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<!-- 3. Modelos de caçamba -->
+	<section aria-labelledby="modelos-cacamba">
+		<div class="flex flex-col items-center text-center mb-12">
+			<span class="text-sm font-black uppercase tracking-widest text-green-700 mb-3">Escolha conforme a sua obra</span>
+			<h2 id="modelos-cacamba" class="text-3xl md:text-[47px] font-black text-gray-900 mb-4 tracking-tighter">
+				Modelos de <span class="text-green-700">caçamba de entulho</span>
+			</h2>
+			<p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+				Compare os tamanhos disponíveis e consulte a página de cada modelo. A indicação final considera o material, o volume estimado e o acesso ao endereço em Guarulhos.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 max-w-7xl mx-auto">
+			{modelosDestaque.map((servico) => (
+				<article class="bg-white border-2 border-gray-100 rounded-3xl overflow-hidden hover:border-green-600 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
+					<a href={`/servicos/${servico.id}`} class="block bg-green-50 p-5" aria-label={`Conhecer ${servico.data.title}`}>
+						<img src={servico.data.image} alt={servico.data.title} width="480" height="360" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-contain" />
+					</a>
+					<div class="p-6 flex flex-col flex-1">
+						<h3 class="text-xl font-black text-gray-900 mb-3">{servico.data.title}</h3>
+						<p class="text-sm text-gray-600 leading-relaxed mb-5 line-clamp-4">{servico.data.description}</p>
+						<a href={`/servicos/${servico.id}`} class="mt-auto text-green-700 font-black hover:underline">Ver detalhes →</a>
+					</div>
+				</article>
+			))}
+		</div>
+
+		<div class="text-center mt-10">
+			<a href="/servicos" class="inline-flex px-8 py-4 bg-gray-100 text-gray-900 font-black rounded-xl hover:bg-gray-200 hover:scale-105 active:scale-95 transition-all">
+				Comparar todos os serviços
+			</a>
 		</div>
 	</section>
 
@@ -293,8 +330,49 @@ const bairrosAtendidos = [
 		</div>
 	</section>
 
+	<!-- 5. Como o orçamento é calculado -->
+	<section class="w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] px-6 py-24 bg-gray-50 border-y border-gray-100" aria-labelledby="preco-cacamba">
+		<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-12 items-center">
+			<div>
+				<span class="text-sm font-black uppercase tracking-widest text-green-700 mb-3 block">Orçamento sem adivinhação</span>
+				<h2 id="preco-cacamba" class="text-3xl md:text-[47px] font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+					Quanto custa uma <span class="text-green-700">caçamba em Guarulhos?</span>
+				</h2>
+				<p class="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
+					O valor depende das características de cada atendimento. Para receber uma indicação adequada, informe o endereço da obra, os materiais que serão descartados, o volume aproximado e a data desejada.
+				</p>
+				<a href="https://wa.me/5511943758808?text=Olá! Gostaria de solicitar um orçamento de caçamba de entulho em Guarulhos." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-green-700 text-white font-black rounded-xl hover:bg-green-800 hover:scale-105 active:scale-95 transition-all shadow-lg">
+					Solicitar orçamento pelo WhatsApp
+				</a>
+			</div>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+				<div class="bg-white border border-gray-200 rounded-2xl p-6">
+					<span class="w-10 h-10 rounded-xl bg-green-100 text-green-800 font-black flex items-center justify-center mb-4">1</span>
+					<h3 class="font-black text-gray-900 text-lg mb-2">Local da entrega</h3>
+					<p class="text-sm text-gray-600 leading-relaxed">O bairro, o acesso do caminhão e o local de posicionamento fazem parte do planejamento.</p>
+				</div>
+				<div class="bg-white border border-gray-200 rounded-2xl p-6">
+					<span class="w-10 h-10 rounded-xl bg-green-100 text-green-800 font-black flex items-center justify-center mb-4">2</span>
+					<h3 class="font-black text-gray-900 text-lg mb-2">Tipo de resíduo</h3>
+					<p class="text-sm text-gray-600 leading-relaxed">Concreto, terra, madeira, gesso e materiais mistos podem exigir orientações diferentes.</p>
+				</div>
+				<div class="bg-white border border-gray-200 rounded-2xl p-6">
+					<span class="w-10 h-10 rounded-xl bg-green-100 text-green-800 font-black flex items-center justify-center mb-4">3</span>
+					<h3 class="font-black text-gray-900 text-lg mb-2">Tamanho da caçamba</h3>
+					<p class="text-sm text-gray-600 leading-relaxed">O volume e principalmente o peso do material orientam a escolha do modelo.</p>
+				</div>
+				<div class="bg-white border border-gray-200 rounded-2xl p-6">
+					<span class="w-10 h-10 rounded-xl bg-green-100 text-green-800 font-black flex items-center justify-center mb-4">4</span>
+					<h3 class="font-black text-gray-900 text-lg mb-2">Prazo e retirada</h3>
+					<p class="text-sm text-gray-600 leading-relaxed">A data, o período de permanência e possíveis trocas são combinados no orçamento.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<div class="flex flex-col">
-		<!-- 5. Depoimentos -->
+		<!-- 6. Depoimentos -->
 		<section class="w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] px-6 py-24 bg-white">
 			<div class="max-w-6xl mx-auto">
 				<h2 class="text-3xl md:text-[47px] font-black mb-16 text-center tracking-tighter text-[#1c2331]">Depoimentos dos <span class="text-green-700">Nossos Clientes</span></h2>
